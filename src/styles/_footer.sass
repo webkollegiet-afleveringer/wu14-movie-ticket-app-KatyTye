@@ -1,0 +1,22 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+
+// STYLING FOR FOOTER COMPONENT
+.bottom-content
+	bottom: 0
+	height: 100px
+	padding: 25px
+	width: 100dvw
+	display: flex
+	position: absolute
+	align-items: center
+	justify-content: space-between
+
+	&__link
+		width: 25px
+		height: 25px
+		color: var.$text-color
+		transition: color 0.3s linear
+
+		&:hover, &:focus, &.active
+			color: var.$icon-hover-color
