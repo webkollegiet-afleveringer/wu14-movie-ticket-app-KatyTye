@@ -1,0 +1,38 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+
+// STYLING FOR HEADER COMPONENT
+.top-content
+	height: 100px
+	display: flex
+	padding: 25px
+	align-items: center
+	justify-content: space-between
+
+	&__page
+
+		&-last
+			height: 25px
+			color: var.$text-color
+
+		&-name
+			font-size: 20px
+			font-weight: bold
+
+		&-icon
+			height: 25px
+			cursor: pointer
+			width: fit-content
+
+	&__profile
+
+		&-link
+			height: 100%
+
+		&-message
+			font-size: 14px
+			color: var.$second-text-color
+
+		&-user
+			font-size: 18px
+			font-weight: 500
