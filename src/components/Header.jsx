@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BsBookmarkDash } from "react-icons/bs";
 import { GoChevronLeft } from "react-icons/go";
 import { IoIosSearch } from "react-icons/io";
@@ -23,30 +24,44 @@ function returnPrettyPageName(url) {
 }
 
 export default function Header() {
+	const [enableSearch, setEnableSearch] = useState(false)
 	const urlPath = useLocation()?.pathname
 
 	return (<header className="top-content">
-		{(urlPath == "/" && <>
-			<div className="top-content__profile-wrapper">
-				<p className="top-content__profile-message">Welcome Back,</p>
-				<p className="top-content__profile-user">USER</p>
-			</div>
+		<div className="top-content__wrapper">
+			{(urlPath == "/" && <>
+				<div className="top-content__profile-wrapper">
+					<p className="top-content__profile-message">Welcome Back,</p>
+					<p className="top-content__profile-user">USER</p>
+				</div>
 
-			<Link to={"/profile"} className="top-content__profile-link">
-				<img src="./images/Profile.png" alt="pofile image"
-					className="top-content__profile-link-image" />
-			</Link>
-		</> || <>
-				<Link className="top-content__page-last" to={"/"}>
-					<GoChevronLeft className="top-content__page-last-icon" />
+				<Link to={"/profile"} className="top-content__profile-link">
+					<img src="./images/Profile.png" alt="pofile image"
+						className="top-content__profile-link-image" />
 				</Link>
+			</> || <>
+					<Link className="top-content__page-last" to={"/"}>
+						<GoChevronLeft className="top-content__page-last-icon" />
+					</Link>
 
-				<p className="top-content__page-name">{returnPrettyPageName(urlPath)}</p>
+					<p className="top-content__page-name">{returnPrettyPageName(urlPath)}</p>
 
-				{(urlPath == "/explore" && <IoIosSearch className="top-content__page-icon" />
-					|| (urlPath == "/details" && <BsBookmarkDash className="top-content__page-icon" />
-						|| <></>
-					))}
-			</>)}
+					{(urlPath == "/explore" && <IoIosSearch className={`top-content__page-icon${(
+						enableSearch == true && " active" || ""
+					)}`} />
+						|| (urlPath == "/details" && <BsBookmarkDash className="top-content__page-icon" />
+							|| <></>
+						))}
+				</>)}
+		</div>
+
+		<form id="search-form" className={`search-form${(
+			(enableSearch == true && urlPath == "/explore") && " active" || " hidden")}`}>
+			<button type="submit" className="search-form__button">
+				<IoIosSearch className="search-form__button-icon" />
+			</button>
+			<input type="text" name="search" id="search-form__input"
+				placeholder="Search your favourite movie" required className="search-form__input" />
+		</form>
 	</header>)
 }

@@ -2,12 +2,55 @@
 @use "./_valuables.sass" as var
 
 // STYLING FOR HEADER COMPONENT
-.top-content
-	height: 100px
+.search-form
+	gap: 10px
+	height: 50px
 	display: flex
-	padding: 25px
+	margin-top: 25px
+	overflow: hidden
 	align-items: center
-	justify-content: space-between
+	justify-content: center
+	border-radius: var.$box-radius
+	background: var.$box-background-color
+	transition: height 0.3s linear, margin-top 0.3s linear
+
+	&.hidden
+		height: 0px
+		margin-top: 0px
+
+	&__button
+		height: 25px
+		border: none
+		cursor: pointer
+		background: transparent
+		color: var.$description-color
+		transition: color 0.3s linear
+
+		&-icon
+			width: 25px
+
+	&__input
+		width: 200px
+		height: 100%
+		cursor: pointer
+		font-size: 14px
+		color: var.$description-color
+		transition: color 0.3s linear
+
+	&:focus, &:hover
+
+		& button, & input
+			color: var.$text-color
+
+.top-content
+	padding: 25px
+	min-height: 100px
+
+	&__wrapper
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
 
 	&__page
 
