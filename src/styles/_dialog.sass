@@ -1,0 +1,69 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+@use 'sass:color'
+
+// STYLING FOR DIALOG COMPONENT
+.dialog-box
+	bottom: 0
+	z-index: 10
+	border: none
+	width: 100dvw
+	height: 100dvh
+	position: fixed
+	background: rgba(var.$overlay-color, 0.5)
+
+	&__background
+		z-index: 11
+		width: 100%
+		height: 100%
+		position: fixed
+
+	&__content
+		bottom: 0
+		z-index: 12
+		padding: 25px
+		position: fixed
+		padding-top: 75px
+		color: var.$text-color
+		border-radius: 60px 60px 20px 20px
+		background: var.$window-background-color
+
+		&-title
+			text-align: center
+
+		&-text
+			font-size: 14px
+			margin-top: 30px
+			text-align: center
+
+		&-button
+			padding: 15px
+			display: block
+			cursor: pointer
+			font-size: 18px
+			margin-top: 40px
+			text-align: center
+			text-decoration: none
+			color: var.$text-color
+			border-radius: var.$box-radius
+			background: var.$second-button-background-color
+
+	&__icon
+		width: 56px
+		height: 56px
+
+		&-wrapper
+			left: 50%
+			z-index: 13
+			width: 110px
+			display: flex
+			height: 110px
+			position: fixed
+			margin-top: auto
+			align-items: center
+			border-radius: 100px
+			color: var.$text-color
+			justify-content: center
+			transform: translate(-50%, -125%)
+			border: 3px solid var.$text-color
+			background: var.$window-background-color

@@ -1,8 +1,8 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router"
+import { fetchMovieFromID } from "./helpers/MovieFetcher"
+import Details from "./pages/Details"
 import Home from "./pages/Home"
 import Layout from "./Layout"
-import Details from "./pages/Details"
-import { fetchMovieFromID } from "./helpers/MovieFetcher"
 
 function App() {
 
