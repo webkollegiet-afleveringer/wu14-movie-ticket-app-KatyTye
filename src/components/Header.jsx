@@ -56,7 +56,7 @@ export default function Header() {
 		</div>
 
 		<form id="search-form" className={`search-form${(
-			(enableSearch == true && urlPath == "/explore") && " active" || " hidden")}`}>
+			(urlPath == "/" || (enableSearch == true && urlPath == "/explore")) && " active" || " hidden")}`}>
 			<button type="submit" className="search-form__button">
 				<IoIosSearch className="search-form__button-icon" />
 			</button>
