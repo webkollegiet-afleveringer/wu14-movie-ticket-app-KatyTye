@@ -1,16 +1,41 @@
-import MoviesExample from '../assets/data/movies.json';
+import MovieExample from '../assets/data/movie.json';
+import CrewExample from '../assets/data/crew.json';
 
-export function fetchMovieFromID(id) {
+export async function fetchMovieFromID(id) {
 
 	if (!import.meta.env.VITE_PRODUCTION) {
-		const response = MoviesExample
-		const movie = response.find(movie => movie.id == id)
+		return {
+			...MovieExample,
+			director: CrewExample.crew.find(p => p.job === "Director").name
+		}
+	} else {
+		const [movieRes, creditsRes] = await Promise.all([
+			fetch(`${import.meta.env.VITE_API_URL}/movie/${id}?language=en-US`, {
+				method: 'GET',
+				headers: {
+					accept: 'application/json',
+					Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`
+				}
+			}),
+			fetch(`${import.meta.env.VITE_API_URL}/movie/${id}/credits?language=en-US`, {
+				method: 'GET',
+				headers: {
+					accept: 'application/json',
+					Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`
+				}
+			})
+		])
 
-		return movie
-	}
+		const movie = await movieRes.json()
+		const credits = await creditsRes.json()
 
-	return {
-		status: "error",
-		message: "Not implemented yet"
+		const director = credits.crew.find(p => p.job === "Director")
+
+		console.log(credits)
+
+		return ({
+			...movie,
+			director: director ? director.name : "Unknown"
+		})
 	}
 } 
