@@ -5,20 +5,20 @@ import { IoIosSearch } from "react-icons/io";
 import { Link, useLocation } from "react-router";
 
 function returnPrettyPageName(url) {
-	switch (url) {
-		case "/details":
+	switch (true) {
+		case url.includes("/details"):
 			return "Movie Details"
-		case "/seats":
+		case url.includes("/seats"):
 			return "Select Seats"
-		case "/explore":
+		case url.includes("/explore"):
 			return "Explore Movies"
-		case "/tickets":
+		case url.includes("/tickets"):
 			return "E-Ticket"
-		case "/checkout":
+		case url.includes("/checkout"):
 			return "Checkout"
-		case "/settings":
+		case url.includes("/settings"):
 			return "Settings"
-		case "/plan":
+		case url.includes("/plan"):
 			return "Saved Plan"
 	}
 }
@@ -46,10 +46,10 @@ export default function Header() {
 
 					<p className="top-content__page-name">{returnPrettyPageName(urlPath)}</p>
 
-					{(urlPath == "/explore" && <IoIosSearch className={`top-content__page-icon${(
+					{(urlPath.includes("/explore") && <IoIosSearch className={`top-content__page-icon${(
 						enableSearch == true && " active" || ""
 					)}`} />
-						|| (urlPath == "/details" && <BsBookmarkDash className="top-content__page-icon" />
+						|| (urlPath.includes("/details") && <BsBookmarkDash className="top-content__page-icon" />
 							|| <></>
 						))}
 				</>)}
