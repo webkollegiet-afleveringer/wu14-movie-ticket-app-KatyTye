@@ -1,0 +1,17 @@
+[
+	{
+		"id": 1,
+		"rated": 7.3,
+		"name": "Shang-Chi",
+		"duration": "02h 43m",
+		"tags": [
+			"Action",
+			"Fiction Fantasy"
+		],
+		"images": [
+			"shangchi"
+		],
+		"director": "Destin Daniel Cretton",
+		"description": "Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization."
+	}
+]
