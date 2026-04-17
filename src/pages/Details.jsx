@@ -7,8 +7,6 @@ export default function Details() {
 	const [showMore, setShowMore] = useState(false)
 	const movie = useRouteLoaderData("movie")
 
-	console.log(movie)
-
 	return (<main className="page-content details">
 		<div className="details__images">
 			<img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

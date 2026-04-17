@@ -31,8 +31,6 @@ export async function fetchMovieFromID(id) {
 
 		const director = credits.crew.find(p => p.job === "Director")
 
-		console.log(credits)
-
 		return ({
 			...movie,
 			director: director ? director.name : "Unknown"
