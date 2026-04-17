@@ -1,37 +1,37 @@
 import { FaStar } from "react-icons/fa";
 import { Link, useRouteLoaderData } from "react-router";
 import { useState } from "react";
+import { convertMinutesToText } from "../helpers/Converter";
 
 export default function Details() {
 	const [showMore, setShowMore] = useState(false)
 	const movie = useRouteLoaderData("movie")
 
+	console.log(movie)
+
 	return (<main className="page-content details">
 		<div className="details__images">
-			{movie.images.map((name, idx) => {
-				return <img src={`${location.origin}/images/${name}.jpg`} alt={`image ${idx}`}
-					className="details__image"
-					key={`movies-images-${idx}`} />
-			})}
+			<img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+				className="details__image" />
 		</div>
 		<article className="details__article">
 			<h2 className="details__article-title">
-				{movie.name}
+				{movie.original_title}
 			</h2>
 			<p className="details__article-short-description">Director: <span>
 				{movie.director}
 			</span> | <FaStar /> <span>
-					{movie.rated}
+					{movie.vote_average.toFixed(1)}
 				</span></p>
 			<ol className="details__article-tags">
-				{movie.tags.map((tag, idx) => {
+				{movie.genres.map((tag, idx) => {
 					return <li className="details__article-tag"
 						key={`movie-tags-${idx}`}>
-						{tag}
+						{tag.name}
 					</li>
 				})}
 				<li className="details__article-tag">
-					{movie.duration}
+					{convertMinutesToText(movie.runtime)}
 				</li>
 			</ol>
 			<h3 className="details__article-title-disc">
@@ -39,7 +39,7 @@ export default function Details() {
 			</h3>
 			<p className="details__description">
 				<span className="details__description-text">
-					{movie.description.split(" ").map((txt, idx) => {
+					{movie.overview.split(" ").map((txt, idx) => {
 						if (idx <= 18) {
 							return txt
 						} else if (showMore == true) {
