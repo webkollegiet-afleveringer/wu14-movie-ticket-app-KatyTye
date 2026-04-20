@@ -1,0 +1,70 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+
+// STYLING FOR EXPLORE PAGE
+.explore
+
+	&__top
+		margin: 25px 25px 0 25px
+
+		&-item
+			width: 166px
+
+			&-name
+				height: 25px
+				margin: 5px 0
+				overflow: hidden
+				white-space: nowrap
+				text-overflow: ellipsis
+
+			&-stars
+				gap: 5px
+				display: flex
+
+				& .full-star,& .half-star,& .nothing-star
+					width: 18px
+					height: 18px
+					color: var.$star-icon-color
+
+			&-image
+				width: auto
+				height: 250px
+				border-radius: var.$box-radius
+
+		&-title
+			font-size: 20px
+
+		&-list
+			gap: 30px
+			width: 100%
+			display: flex
+			margin-top: 10px
+			overflow: hidden
+			flex-wrap: nowrap
+			list-style-type: none
+
+	&__button
+		width: 45%
+		height: 100%
+		border: none
+		cursor: pointer
+		font-size: 14px
+		border-radius: 6px
+		background: transparent
+		color: rgba(var.$text-color, 0.5)
+		transition: background 0.3s linear, color 0.3s linear
+
+		&:hover, &:focus, &.active
+			color: var.$text-color
+			background: var.$icon-hover-color
+
+		&s
+			gap: 20px
+			height: 65px
+			display: flex
+			margin: 0 25px
+			padding: 10px
+			align-items: center
+			justify-content: space-between
+			border-radius: var.$box-radius
+			background: var.$box-background-color

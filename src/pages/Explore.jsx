@@ -12,14 +12,14 @@ function returnStars(rated = 0) {
 				key={currentRating} />)
 			currentRating = (currentRating - 1).toFixed(1)
 		} else {
-			starElements.push(<FaStarHalf className="half-star"
+			starElements.push(<FaStarHalfAlt className="half-star"
 				key={currentRating} />)
 			currentRating = 0
 		}
 	}
 
 	while (starElements.length < 5) {
-		starElements.push(<FaStar className="nothing-star"
+		starElements.push(<FaRegStar className="nothing-star"
 			key={`star-${starElements.length}`} />)
 	}
 
