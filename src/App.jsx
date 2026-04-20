@@ -1,6 +1,7 @@
+import { fetchMovieFromID, initialMovieFetches } from "./helpers/MovieFetcher"
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router"
-import { fetchMovieFromID } from "./helpers/MovieFetcher"
 import Details from "./pages/Details"
+import Explore from "./pages/Explore"
 import Home from "./pages/Home"
 import Layout from "./Layout"
 
@@ -10,10 +11,15 @@ function App() {
 		{
 			id: "root",
 			element: <Layout />,
+			loader: initialMovieFetches,
 			children: [
 				{
 					index: true,
 					element: <Home />
+				},
+				{
+					path: "/explore",
+					element: <Explore />
 				},
 				{
 					id: "movie",
