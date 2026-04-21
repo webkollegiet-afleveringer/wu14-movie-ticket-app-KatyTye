@@ -1,5 +1,6 @@
 // VALUABLES
 @use "./_valuables.sass" as var
+@use 'sass:color'
 
 // STYLING FOR HOME PAGE
 .home-content
@@ -73,7 +74,7 @@
 
 				& p:first-of-type
 					font-weight: bolder
-					color: adjust-color(var.$second-text-color, $blackness: 50%)
+					color: color.adjust(var.$second-text-color, $blackness: 50%)
 
 	&__soon
 		margin: 25px 25px 0 25px
