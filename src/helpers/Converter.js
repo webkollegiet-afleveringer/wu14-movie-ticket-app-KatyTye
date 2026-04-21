@@ -1,3 +1,18 @@
+const months = [
+	"January",
+	"February",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
+	"December"
+]
+
 export function convertMinutesToText(minutes) {
 	const hours = Math.floor(minutes / 60)
 	const remainingMinutes = minutes % 60
@@ -7,4 +22,8 @@ export function convertMinutesToText(minutes) {
 	} else {
 		return `${remainingMinutes}m`
 	}
+}
+
+export function convertDateToText(date) {
+	return months[date.getMonth()]
 }
