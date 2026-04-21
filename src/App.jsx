@@ -4,6 +4,8 @@ import Details from "./pages/Details"
 import Explore from "./pages/Explore"
 import Home from "./pages/Home"
 import Layout from "./Layout"
+import Loading from "./pages/Loading"
+import Error from "./pages/Error"
 
 function App() {
 
@@ -11,7 +13,9 @@ function App() {
 		{
 			id: "root",
 			element: <Layout />,
+			errorElement: <Error />,
 			loader: initialMovieFetches,
+			hydrateFallbackElement: <Loading />,
 			children: [
 				{
 					index: true,
