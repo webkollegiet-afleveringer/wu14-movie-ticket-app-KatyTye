@@ -11,6 +11,8 @@ const fetchHeader = {
 
 export async function initialMovieFetches() {
 	if (!import.meta.env.VITE_PRODUCTION) {
+
+	} else {
 		const [trendingRes, recommendationsRes, commingSoonRes] = await Promise.all([
 			fetch(`${import.meta.env.VITE_API_URL}/trending/movie/week`, fetchHeader),
 			fetch(`${import.meta.env.VITE_API_URL}/movie/634649/recommendations`, fetchHeader),
