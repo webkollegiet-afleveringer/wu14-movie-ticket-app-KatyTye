@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Layout from "./Layout"
 import Loading from "./pages/Loading"
 import Error from "./pages/Error"
+import Seats from "./pages/Seats"
 
 function App() {
 
@@ -34,6 +35,10 @@ function App() {
 						{
 							path: "/details/:id",
 							element: <Details />
+						},
+						{
+							path: "/seats/:id",
+							element: <Seats />
 						}
 					]
 				}

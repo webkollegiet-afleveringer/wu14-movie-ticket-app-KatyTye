@@ -24,6 +24,10 @@ export function convertMinutesToText(minutes) {
 	}
 }
 
-export function convertDateToText(date) {
-	return months[date.getMonth()]
+export function convertDateToText(date, short = false) {
+	if (short) {
+		return months[date.getMonth()].slice(0, 3)
+	} else {
+		return months[date.getMonth()]
+	}
 }
