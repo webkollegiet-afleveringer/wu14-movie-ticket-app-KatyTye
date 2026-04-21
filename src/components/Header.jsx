@@ -50,7 +50,10 @@ export default function Header() {
 						enableSearch == true && " active" || ""
 					)}`} />
 						|| (urlPath.includes("/details") && <BsBookmarkDash className="top-content__page-icon" />
-							|| <></>
+							|| (urlPath.includes("/seats") &&
+								<div className="top-content__exbox"></div>
+								||
+								<></>)
 						))}
 				</>)}
 		</div>
