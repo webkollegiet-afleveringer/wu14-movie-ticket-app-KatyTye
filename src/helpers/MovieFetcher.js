@@ -16,7 +16,9 @@ const getLocation = () => new Promise((resolve, reject) => {
 			"lat": latitude,
 			"lon": longitude
 		})
-	}, reject)
+	}, () => {
+		reject("Please allow location access to get cinemas near you.")
+	})
 })
 
 export async function initialMovieFetches() {
