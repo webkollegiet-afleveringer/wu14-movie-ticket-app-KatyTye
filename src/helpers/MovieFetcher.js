@@ -1,3 +1,7 @@
+import RecommendationsExample from '../assets/data/recommendations.json';
+import CommingSoonExample from '../assets/data/commingSoon.json';
+import TrendingExample from '../assets/data/trending.json';
+import CinemaExample from '../assets/data/cinema.json';
 import MovieExample from '../assets/data/movie.json';
 import CrewExample from '../assets/data/crew.json';
 
@@ -23,7 +27,12 @@ const getLocation = () => new Promise((resolve, reject) => {
 
 export async function initialMovieFetches() {
 	if (!import.meta.env.VITE_PRODUCTION) {
-
+		return {
+			trending: TrendingExample,
+			recommendations: RecommendationsExample,
+			commingSoon: CommingSoonExample,
+			cinema: CinemaExample
+		}
 	} else {
 		const loc = await getLocation()
 		const [trendingRes, recommendationsRes, commingSoonRes, cinemaRes] = await Promise.all([

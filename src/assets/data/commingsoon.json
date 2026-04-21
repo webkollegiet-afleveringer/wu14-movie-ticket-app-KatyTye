@@ -1,0 +1,394 @@
+[
+	{
+		"adult": false,
+		"backdrop_path": "/kxQiIJ4gVcD3K6o14MJ72p5yRcE.jpg",
+		"genre_ids": [
+			10751,
+			35,
+			12,
+			14,
+			16
+		],
+		"id": 1226863,
+		"original_language": "en",
+		"original_title": "The Super Mario Galaxy Movie",
+		"overview": "Having thwarted Bowser's previous plot to marry Princess Peach, Mario and Luigi now face a fresh threat in Bowser Jr., who is determined to liberate his father from captivity and restore the family legacy. Alongside companions new and old, the brothers travel across the stars to stop the young heir's crusade.",
+		"popularity": 743.5165,
+		"poster_path": "/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
+		"release_date": "2026-04-01",
+		"title": "The Super Mario Galaxy Movie",
+		"video": false,
+		"vote_average": 6.756,
+		"vote_count": 537
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/zc08qkHtWfZ2cQGQBK1S5yafJmR.jpg",
+		"genre_ids": [
+			27,
+			9648
+		],
+		"id": 1304313,
+		"original_language": "en",
+		"original_title": "Lee Cronin's The Mummy",
+		"overview": "The young daughter of a journalist disappears into the desert without a trace—eight years later, the broken family is shocked when she is returned to them, as what should be a joyful reunion turns into a living nightmare.",
+		"popularity": 172.5233,
+		"poster_path": "/8L8efNkz8rUmwR7sV0g3vnC9yjn.jpg",
+		"release_date": "2026-04-15",
+		"title": "Lee Cronin's The Mummy",
+		"video": false,
+		"vote_average": 6.9,
+		"vote_count": 108
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/tq3h43fZy0H80vzf47MAY7R9Mxo.jpg",
+		"genre_ids": [
+			16,
+			35,
+			10751
+		],
+		"id": 1297842,
+		"original_language": "en",
+		"original_title": "GOAT",
+		"overview": "A small goat with big dreams gets a once-in-a-lifetime shot to join the pros and play roarball, a high-intensity, co-ed, full-contact sport dominated by the fastest, fiercest animals in the world.",
+		"popularity": 136.4176,
+		"poster_path": "/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
+		"release_date": "2026-02-11",
+		"title": "GOAT",
+		"video": false,
+		"vote_average": 7.902,
+		"vote_count": 417
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/fPfDB0IHOqvmKIzFP9CA51OOS1N.jpg",
+		"genre_ids": [
+			27,
+			53
+		],
+		"id": 1010755,
+		"original_language": "en",
+		"original_title": "The Strangers: Chapter 3",
+		"overview": "Tethered by a frightening conclusion, Maya and the Strangers are locked on an unavoidable, unforgiving collision course — a showdown that proves they’re far from strangers now.",
+		"popularity": 145.917,
+		"poster_path": "/yPHwX78mcwJw3I6YOJ9qh2wQBFr.jpg",
+		"release_date": "2026-02-05",
+		"title": "The Strangers: Chapter 3",
+		"video": false,
+		"vote_average": 5.67,
+		"vote_count": 115
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/qXxFWyur7jFkg2aQgENcXuyYeHF.jpg",
+		"genre_ids": [
+			27,
+			9648
+		],
+		"id": 1480387,
+		"original_language": "en",
+		"original_title": "undertone",
+		"overview": "The host of a popular paranormal podcast becomes haunted by terrifying recordings mysteriously sent her way.",
+		"popularity": 128.2748,
+		"poster_path": "/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
+		"release_date": "2026-03-12",
+		"title": "undertone",
+		"video": false,
+		"vote_average": 6.7,
+		"vote_count": 79
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/yJi6g0CnsqANLNuVaRX28tZxeHX.jpg",
+		"genre_ids": [
+			27,
+			9648
+		],
+		"id": 1193501,
+		"original_language": "en",
+		"original_title": "Whistle",
+		"overview": "A misfit group of unwitting high school students stumble upon a cursed object, an ancient Aztec Death Whistle. They discover that blowing the whistle and the terrifying sound it emits will summon their future deaths to hunt them down.",
+		"popularity": 95.8416,
+		"poster_path": "/eGxPyseSnEZBMJaopGfRUO9HSYx.jpg",
+		"release_date": "2026-01-20",
+		"title": "Whistle",
+		"video": false,
+		"vote_average": 6.039,
+		"vote_count": 246
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/1ytf7rzkZ7RLlMnBdGggQ0ENe6z.jpg",
+		"genre_ids": [
+			27,
+			53
+		],
+		"id": 1418657,
+		"original_language": "en",
+		"original_title": "The Yeti",
+		"overview": "When an oil tycoon and a famous adventurer vanish into the harsh winter of remote northern Alaska, a hand-picked rescue team endeavors to bring them home. What they don’t know is that they are trespassing on The Yeti’s territory, and the elements are the least of their worries.",
+		"popularity": 95.3682,
+		"poster_path": "/zaqEfoKcWkVni2eONhJ7DRhMO8Q.jpg",
+		"release_date": "2026-04-04",
+		"title": "The Yeti",
+		"video": false,
+		"vote_average": 6.894,
+		"vote_count": 33
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/xBT0oNq6rsTFv4SxG5uGRIEOrq6.jpg",
+		"genre_ids": [
+			10402,
+			18
+		],
+		"id": 936075,
+		"original_language": "en",
+		"original_title": "Michael",
+		"overview": "Discover the story of Michael Jackson, one of the most influential artists the world has ever known, and his life beyond the music, tracing his journey from the discovery of his extraordinary talent as the lead of the Jackson Five, to the visionary artist whose creative ambition fueled a relentless pursuit to become the biggest entertainer in the world, highlighting both his life off-stage and some of the most iconic performances from his early solo career.",
+		"popularity": 62.0023,
+		"poster_path": "/psnnsr49QGdMCWPXIkJFNgKczd5.jpg",
+		"release_date": "2026-04-22",
+		"title": "Michael",
+		"video": false,
+		"vote_average": 0,
+		"vote_count": 0
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/1oKLEA9JOhvaBwLpqjROisvWMy7.jpg",
+		"genre_ids": [
+			10749,
+			35,
+			18
+		],
+		"id": 1325734,
+		"original_language": "en",
+		"original_title": "The Drama",
+		"overview": "A happily engaged couple is put to the test when an unexpected turn sends their wedding week off the rails.",
+		"popularity": 42.6867,
+		"poster_path": "/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
+		"release_date": "2026-03-26",
+		"title": "The Drama",
+		"video": false,
+		"vote_average": 7.031,
+		"vote_count": 483
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/dHSz0tSFuO2CsXJ1CApSauP9Ncl.jpg",
+		"genre_ids": [
+			80,
+			53
+		],
+		"id": 425274,
+		"original_language": "en",
+		"original_title": "Now You See Me: Now You Don't",
+		"overview": "The original Four Horsemen reunite with a new generation of illusionists to take on powerful diamond heiress Veronika Vanderberg, who leads a criminal empire built on money laundering and trafficking. The new and old magicians must overcome their differences to work together on their most ambitious heist yet.",
+		"popularity": 48.7319,
+		"poster_path": "/oD3Eey4e4Z259XLm3eD3WGcoJAh.jpg",
+		"release_date": "2025-11-12",
+		"title": "Now You See Me: Now You Don't",
+		"video": false,
+		"vote_average": 6.508,
+		"vote_count": 1390
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/ySHUoK4utUOiSfCinw81H1TsV0E.jpg",
+		"genre_ids": [
+			878,
+			28,
+			27
+		],
+		"id": 1241470,
+		"original_language": "en",
+		"original_title": "Osiris",
+		"overview": "Special Forces commandos on a mission are abducted mid-operation by a mysterious spacecraft. Upon waking aboard, they find themselves prey to a relentless alien race in a fight for survival.",
+		"popularity": 32.3544,
+		"poster_path": "/3YtZHtXPNG5AleisgEatEfZOT2w.jpg",
+		"release_date": "2025-07-25",
+		"title": "Osiris",
+		"video": false,
+		"vote_average": 5.989,
+		"vote_count": 223
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/drRxbu2OHG0DEENptZ8wI5f0uEU.jpg",
+		"genre_ids": [
+			878,
+			28,
+			35
+		],
+		"id": 1119449,
+		"original_language": "en",
+		"original_title": "Good Luck, Have Fun, Don't Die",
+		"overview": "A 'Man from the Future' arrives at an LA diner where he must recruit the precise combination of disgruntled patrons to join him on a one-night quest to save the world from the terminal threat of a rogue artificial intelligence.",
+		"popularity": 42.0199,
+		"poster_path": "/rWcfOdY7TU6lTdazWj0ebDZnAfO.jpg",
+		"release_date": "2026-02-13",
+		"title": "Good Luck, Have Fun, Don't Die",
+		"video": false,
+		"vote_average": 6.941,
+		"vote_count": 363
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/3cVrg7tzSf5AgEecYWDOSAzXAeX.jpg",
+		"genre_ids": [
+			27,
+			9648
+		],
+		"id": 1408208,
+		"original_language": "ja",
+		"original_title": "８番出口",
+		"overview": "A man trapped in an endless sterile subway passageway sets out to find Exit 8. The rules of his quest are simple: do not overlook anything out of the ordinary. If you discover an anomaly, turn back immediately. If you don’t, carry on. Then leave from Exit 8. But even a single oversight will send him back to the beginning. Will he ever reach his goal and escape this infinite corridor?",
+		"popularity": 31.1269,
+		"poster_path": "/nQXYTvm6AY4WmtcPskroqC7Skh.jpg",
+		"release_date": "2025-08-28",
+		"title": "Exit 8",
+		"video": false,
+		"vote_average": 6.6,
+		"vote_count": 290
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/Af907x5h9W1wVis8XrSd7ynTWuy.jpg",
+		"genre_ids": [
+			18,
+			35
+		],
+		"id": 1314481,
+		"original_language": "en",
+		"original_title": "The Devil Wears Prada 2",
+		"overview": "Miranda Priestly navigates her career amid the decline of traditional magazine publishing. She faces off against Emily Charlton, her one-time assistant, now a high-powered executive for a luxury group, with advertising dollars that Priestly desperately needs.",
+		"popularity": 28.6647,
+		"poster_path": "/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
+		"release_date": "2026-04-29",
+		"title": "The Devil Wears Prada 2",
+		"video": false,
+		"vote_average": 0,
+		"vote_count": 0
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
+		"genre_ids": [
+			28,
+			18
+		],
+		"id": 361743,
+		"original_language": "en",
+		"original_title": "Top Gun: Maverick",
+		"overview": "After more than thirty years of service as one of the Navy’s top aviators, and dodging the advancement in rank that would ground him, Pete “Maverick” Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
+		"popularity": 28.5748,
+		"poster_path": "/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+		"release_date": "2022-05-21",
+		"title": "Top Gun: Maverick",
+		"video": false,
+		"vote_average": 8.152,
+		"vote_count": 10779
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+		"genre_ids": [
+			18,
+			53
+		],
+		"id": 550,
+		"original_language": "en",
+		"original_title": "Fight Club",
+		"overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+		"popularity": 26.518,
+		"poster_path": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+		"release_date": "1999-10-15",
+		"title": "Fight Club",
+		"video": false,
+		"vote_average": 8.438,
+		"vote_count": 31822
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/ykigHs1OIyqqV04zfFqIlSHp546.jpg",
+		"genre_ids": [
+			53,
+			27,
+			28,
+			9648,
+			878
+		],
+		"id": 1412598,
+		"original_language": "en",
+		"original_title": "Killer Whale",
+		"overview": "Follows best friends Maddie and Trish as they find themselves trapped in a remote lagoon with the dangerous killer whale named Ceto.",
+		"popularity": 25.3447,
+		"poster_path": "/xC6zdIoIHjhOIFmjNyGgtzhuhiF.jpg",
+		"release_date": "2026-01-16",
+		"title": "Killer Whale",
+		"video": false,
+		"vote_average": 5.7,
+		"vote_count": 79
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/q05WV8DwEiyLbCgSVtg55RbUzou.jpg",
+		"genre_ids": [
+			28,
+			27,
+			35
+		],
+		"id": 1292695,
+		"original_language": "en",
+		"original_title": "They Will Kill You",
+		"overview": "A woman answers a help wanted ad to be a housekeeper in a mysterious New York City high-rise, unaware that she is entering a community that has seen a number of disappearances over the years and may be under the grip of a Satanic cult.",
+		"popularity": 20.436,
+		"poster_path": "/nSXCFSvI2p5WLgMrOHACbVnEJSR.jpg",
+		"release_date": "2026-03-25",
+		"title": "They Will Kill You",
+		"video": false,
+		"vote_average": 6.558,
+		"vote_count": 137
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/bf5TG9RODkPXmtJSgf8Iymof1wl.jpg",
+		"genre_ids": [
+			36,
+			18
+		],
+		"id": 1214931,
+		"original_language": "en",
+		"original_title": "Nuremberg",
+		"overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+		"popularity": 20.9249,
+		"poster_path": "/7cWTGH2svfNHWVRjsfKIBob9pDj.jpg",
+		"release_date": "2025-11-06",
+		"title": "Nuremberg",
+		"video": false,
+		"vote_average": 7.392,
+		"vote_count": 862
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/2dlt9I2ga6hweywz9zsFUz1PVii.jpg",
+		"genre_ids": [
+			878,
+			53,
+			27
+		],
+		"id": 604079,
+		"original_language": "en",
+		"original_title": "The Long Walk",
+		"overview": "In a dystopian 1970s America, fifty teenage boys take part in a deadly annual walking contest, forced to maintain a minimum pace or be executed, until only one survivor remains.",
+		"popularity": 20.0038,
+		"poster_path": "/wobVTa99eW0ht6c1rNNzLkazPtR.jpg",
+		"release_date": "2025-09-10",
+		"title": "The Long Walk",
+		"video": false,
+		"vote_average": 6.922,
+		"vote_count": 1345
+	}
+]
