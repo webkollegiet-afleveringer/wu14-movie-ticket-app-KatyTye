@@ -1,28 +1,8 @@
+import { convertDateToText, returnDateAndTime } from "../helpers/Converter"
 import { useRouteLoaderData } from "react-router"
-import { convertDateToText } from "../helpers/Converter"
-
-function returnDateAndTime() { /// FIX BELOW
-	const today = new Date()
-	let current = today.getDate()
-	let dateArray = []
-	let newDay = `
-		${(current <= 9 && `0${current}` || current)}/${convertDateToText(today, true)}/${today.getFullYear()}
-	`
-
-	while (dateArray.length <= 10) {
-		dateArray.push(newDay)
-		current += 1
-	}
-
-	return ({
-		dates: dateArray
-	})
-}
 
 export default function Seats() {
 	const movieData = useRouteLoaderData("root")
-
-	console.log(returnDateAndTime())
 
 	return (<main className="seats-content">
 		<form className="seats-content__form">
@@ -45,10 +25,25 @@ export default function Seats() {
 						Date
 					</span>
 					<select name="date" id="date" className="seats-content__form-select">
-						{(movieData?.cinema.map((cima, index) => {
+						{(returnDateAndTime()?.dates?.map((date, index) => {
 							return <option className="seats-content__form-option"
-								value={index} key={`option-cinema-${index}`}>
-								{cima.properties.name}
+								value={index} key={`option-dates-${index}`}>
+								{date.replaceAll("/", " ")}
+							</option>
+						}))}
+					</select>
+				</label>
+
+				<label for="time" className="seats-content__form-label">
+					<span className="seats-content__form-label-text">
+						Time
+					</span>
+					<select name="time" id="time" className="seats-content__form-select">
+						{(returnDateAndTime()?.times?.map((time, index) => {
+							if (index <= 6 || index >= 22 || `${index / 2}`.includes(".")) { return }
+							return <option className="seats-content__form-option"
+								value={index} key={`option-time-${index}`}>
+								{time}
 							</option>
 						}))}
 					</select>
