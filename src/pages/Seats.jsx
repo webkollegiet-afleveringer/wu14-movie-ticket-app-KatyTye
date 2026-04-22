@@ -7,6 +7,7 @@ export default function Seats() {
 	const [occupiedSeats, setOccupiedSeats] = useState([])
 	const [selectedSeats, setSelectedSeats] = useState([])
 	const movieData = useRouteLoaderData("root")
+	const movie = useRouteLoaderData("movie")
 	const Navigator = useNavigate()
 	const movieID = useParams().id
 	let loadedSeats = 0
@@ -86,13 +87,15 @@ export default function Seats() {
 
 		localStorage.setItem("movie_temp", JSON.stringify({
 			id: movieID,
+			name: movie.original_title,
+			price: randomInt(9, 29),
 			cinema: elm[0].value,
 			date: elm[1].value,
 			time: elm[2].value,
 			seats: selectedSeats
 		}))
 
-		Navigator(`/checkout/${movieID}`)
+		Navigator("/checkout")
 	}
 
 	return (<main className="seats-content">

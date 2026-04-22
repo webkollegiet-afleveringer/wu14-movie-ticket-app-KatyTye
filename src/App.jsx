@@ -7,6 +7,7 @@ import Layout from "./Layout"
 import Loading from "./pages/Loading"
 import Error from "./pages/Error"
 import Seats from "./pages/Seats"
+import Checkout from "./pages/Checkout"
 
 function App() {
 
@@ -41,6 +42,10 @@ function App() {
 							element: <Seats />
 						}
 					]
+				},
+				{
+					path: "/checkout",
+					element: <Checkout />
 				}
 			]
 		}
