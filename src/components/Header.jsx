@@ -27,6 +27,12 @@ export default function Header() {
 	const [enableSearch, setEnableSearch] = useState(false)
 	const urlPath = useLocation()?.pathname
 
+	console.log(urlPath)
+
+	if (urlPath.includes("/seats")) {
+		console.log(true)
+	}
+
 	return (<header className="top-content">
 		<div className="top-content__wrapper">
 			{(urlPath == "/" && <>
@@ -50,7 +56,7 @@ export default function Header() {
 						enableSearch == true && " active" || ""
 					)}`} />
 						|| (urlPath.includes("/details") && <BsBookmarkDash className="top-content__page-icon" />
-							|| (urlPath.includes("/seats") || urlPath.includes("/checkout") &&
+							|| ((urlPath.includes("/seats") || urlPath.includes("/checkout")) &&
 								<div className="top-content__exbox"></div>
 								||
 								<></>)
