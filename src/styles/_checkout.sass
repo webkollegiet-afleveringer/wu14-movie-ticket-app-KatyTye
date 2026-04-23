@@ -1,0 +1,121 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+
+// STYLING FOR CHECKOUT PAGE
+.checkout-content
+
+	&__nothing
+		padding: 0 25px 25px 25px
+
+	&__cards
+		margin: 0 25px
+
+		&-list
+			gap: 25px
+			width: 100%
+			display: flex
+			margin-top: 10px
+			flex-wrap: nowrap
+			scrollbar-width: none
+			list-style-type: none
+			overflow: scroll hidden
+
+		&-item
+			overflow: hidden
+			position: relative
+			padding-bottom: 68px
+			background: #35AAFF
+			min-width: calc(100dvw - 50px)
+			border-radius: var.$img-radius
+
+			&-bg
+				top: -2px
+				right: -85px
+				height: 158px
+				position: absolute
+
+			&-wrapper
+				text-align: right
+
+			&-logo
+				width: 32px
+				height: 32px
+				margin: 5px 0 0 10px
+
+			&-balance
+				font-size: 18px
+				margin-top: 10px
+				font-weight: bold
+
+			&-top
+				height: 110px
+				position: relative
+				padding: 10px 30px 10px 10px
+
+				&-text
+					font-size: 12px
+					font-weight: normal
+
+			&-bottom
+				width: 100%
+				bottom: 0
+				position: absolute
+				align-items: center
+				background: #007CD7
+				padding: 12px 30px 12px 10px
+
+				&-text
+					font-size: 12px
+					font-weight: normal
+
+				& div
+					text-align: left
+
+					& p:last-of-type
+						font-size: 12px
+						font-weight: bold
+
+			&-top, &-bottom
+				display: flex
+				justify-content: space-between
+
+		&-title
+			display: flex
+			font-size: 20px
+			align-items: center
+			justify-content: space-between
+
+			&-button
+				font-size: 14px
+				cursor: pointer
+				font-weight: lighter
+				color: var.$text-tag-color
+
+	&__form
+
+		&-submit
+			display: flex
+			justify-content: space-evenly
+
+			& span:nth-of-type(3)
+				font-weight: bold
+
+			& span:nth-of-type(2)
+				width: 2px
+				height: 27px
+				display: block
+				background: var.$text-color
+
+		&-input
+			font-size: 12px
+
+		&-label-text
+			margin-top: 10px
+
+		&-title
+			font-size: 20px
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
