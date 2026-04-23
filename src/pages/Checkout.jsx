@@ -113,8 +113,7 @@ export default function Checkout() {
 								CVV
 							</span>
 							<input className="checkout-content__form-input"
-								type="number" name="cvv" id="cvv"
-								min={100} max={999} placeholder="123" required />
+								type="text" name="cvv" id="cvv" placeholder="123" required />
 						</label>
 					</div>
 
