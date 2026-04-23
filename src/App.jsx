@@ -8,6 +8,7 @@ import Loading from "./pages/Loading"
 import Error from "./pages/Error"
 import Seats from "./pages/Seats"
 import Checkout from "./pages/Checkout"
+import Tickets from "./pages/Tickets"
 
 function App() {
 
@@ -46,6 +47,10 @@ function App() {
 				{
 					path: "/checkout",
 					element: <Checkout />
+				},
+				{
+					path: "/tickets",
+					element: <Tickets />
 				}
 			]
 		}
