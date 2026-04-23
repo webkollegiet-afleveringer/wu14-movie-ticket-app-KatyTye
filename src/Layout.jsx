@@ -9,7 +9,7 @@ export default function Layout() {
 
 	return (<>
 		<Header />
-		<Outlet />
+		<Outlet context={[showDialog, setShowDialog]} />
 		<Footer />
 		<Overlay show={showDialog} setShow={setShowDialog} />
 	</>)

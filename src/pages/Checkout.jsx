@@ -1,8 +1,11 @@
 import CardBackground from "../assets/icons/card_background.svg?react"
 import MasterCard from "../assets/icons/mastercard.svg?react"
+import { randomInt } from "../helpers/Converter"
+import { useOutletContext } from "react-router"
 import { useEffect, useState } from "react"
 
 export default function Checkout() {
+	const [showDialog, setShowDialog] = useOutletContext()
 	const [selected, setSelected] = useState(0)
 	const [cards, setCards] = useState([])
 	const [data, setData] = useState({})
@@ -24,8 +27,25 @@ export default function Checkout() {
 		}
 	}
 
-	console.log(cards)
-	console.log(data)
+	function handleSubmit(event) {
+		event.preventDefault()
+		const elements = event.target.elements
+
+		// TEMP STORING
+		localStorage.setItem("movie_tickets",
+			`${JSON.stringify([{
+				id: data?.id,
+				status: true,
+				order: randomInt(100000, 999999),
+				date: data?.date,
+				seats: data?.seats,
+				time: data?.time,
+				location: data?.cinema
+			}])}`
+		)
+
+		setShowDialog(1)
+	}
 
 	return (<main className="checkout-content">
 		{!(data?.id) &&
@@ -68,7 +88,7 @@ export default function Checkout() {
 					</ul>
 				</section>
 
-				<form className="checkout-content__form">
+				<form className="checkout-content__form" onSubmit={evt => handleSubmit(evt)}>
 					<h2 className="checkout-content__form-title">
 						Payment Details
 					</h2>

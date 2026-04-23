@@ -27,12 +27,6 @@ export default function Header() {
 	const [enableSearch, setEnableSearch] = useState(false)
 	const urlPath = useLocation()?.pathname
 
-	console.log(urlPath)
-
-	if (urlPath.includes("/seats")) {
-		console.log(true)
-	}
-
 	return (<header className="top-content">
 		<div className="top-content__wrapper">
 			{(urlPath == "/" && <>
