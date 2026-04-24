@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export default function Overlay({ show, setShow }) {
 
-	return (<dialog className="dialog-box" open={(show >= 1 && true || false)}>
+	return (<dialog className={`dialog-box${(show >= 1 && " showed" || " hidden")}`} open>
 		<div className="dialog-box__background" onClick={() => setShow(0)}>
 		</div>
 		<div className="dialog-box__content">
