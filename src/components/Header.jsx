@@ -26,6 +26,7 @@ function returnPrettyPageName(url) {
 export default function Header() {
 	const [enableSearch, setEnableSearch] = useState(false)
 	const urlPath = useLocation()?.pathname
+	const lastPath = urlPath.split("/")[2]
 
 	return (<header className="top-content">
 		<div className="top-content__wrapper">
@@ -40,7 +41,7 @@ export default function Header() {
 						className="top-content__profile-link-image" />
 				</Link>
 			</> || <>
-					<Link className="top-content__page-last" to={"/"}>
+					<Link className="top-content__page-last" to={(urlPath.includes("/seats") && `/details/${lastPath}` || "/")}>
 						<GoChevronLeft className="top-content__page-last-icon" />
 					</Link>
 
@@ -58,13 +59,13 @@ export default function Header() {
 				</>)}
 		</div>
 
-		<form id="search-form" className={`search-form${(
+		{((urlPath == "/" || urlPath == "/explore") && <form id="search-form" className={`search-form${(
 			(urlPath == "/" || (enableSearch == true && urlPath == "/explore")) && " active" || " hidden")}`}>
 			<button type="submit" className="search-form__button">
 				<IoIosSearch className="search-form__button-icon" />
 			</button>
 			<input type="text" name="search" id="search-form__input"
 				placeholder="Search your favourite movie" required className="search-form__input" />
-		</form>
+		</form>)}
 	</header>)
 }
