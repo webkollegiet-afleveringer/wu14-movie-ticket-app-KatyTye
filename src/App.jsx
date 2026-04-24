@@ -1,4 +1,4 @@
-import { fetchMovieFromID, initialMovieFetches } from "./helpers/MovieFetcher"
+import { fetchMovieFromID, fetchMovieTickets, initialMovieFetches } from "./helpers/MovieFetcher"
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router"
 import Details from "./pages/Details"
 import Explore from "./pages/Explore"
@@ -49,8 +49,10 @@ function App() {
 					element: <Checkout />
 				},
 				{
+					id: "tickets",
 					path: "/tickets",
-					element: <Tickets />
+					element: <Tickets />,
+					loader: fetchMovieTickets
 				}
 			]
 		}

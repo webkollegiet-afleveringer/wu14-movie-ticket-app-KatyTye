@@ -13,6 +13,15 @@ const fetchHeader = {
 	}
 }
 
+const extraFetchHeader = {
+	method: 'GET',
+	headers: {
+		accept: 'application/json',
+		"key-path": `${import.meta.env.VITE_PRM_API_PATH}`,
+		Authorization: `Bearer ${import.meta.env.VITE_PRM_API_KEY}`
+	}
+}
+
 const getLocation = () => new Promise((resolve, reject) => {
 	navigator.geolocation.getCurrentPosition((position) => {
 		const { latitude, longitude } = position.coords
@@ -80,3 +89,18 @@ export async function fetchMovieFromID(id) {
 		})
 	}
 }
+
+export async function fetchMovieTickets() {
+
+	if (!import.meta.env.VITE_PRODUCTION) {
+		const response = await fetch("http://localhost:3000/mymovies/tickets", extraFetchHeader)
+		const data = await response.json()
+
+		return data.result
+	} else {
+		const response = await fetch(`${import.meta.env.VITE_PRM_API_URL}`, extraFetchHeader)
+		const data = await response.json()
+
+		return data.result
+	}
+} 
