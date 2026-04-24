@@ -38,7 +38,6 @@ export default function Explore() {
 			setShowMore(0)
 		}
 	}
-	console.log(movieData)
 
 	return (<main className="page-content explore">
 		<div className="explore__buttons">
