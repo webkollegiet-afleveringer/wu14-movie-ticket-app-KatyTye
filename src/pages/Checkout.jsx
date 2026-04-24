@@ -3,6 +3,7 @@ import MasterCard from "../assets/icons/mastercard.svg?react"
 import { randomInt } from "../helpers/Converter"
 import { useOutletContext } from "react-router"
 import { useEffect, useState } from "react"
+import { handlePurchase } from "../helpers/Purchase"
 
 export default function Checkout() {
 	const [showDialog, setShowDialog] = useOutletContext()
@@ -31,20 +32,11 @@ export default function Checkout() {
 		event.preventDefault()
 		const elements = event.target.elements
 
-		// TEMP STORING
-		localStorage.setItem("movie_tickets",
-			`${JSON.stringify([{
-				id: data?.id,
-				status: true,
-				order: randomInt(100000, 999999),
-				date: data?.date,
-				seats: data?.seats,
-				time: data?.time,
-				location: data?.cinema
-			}])}`
-		)
-
-		setShowDialog(1)
+		if (handlePurchase(data, elements)) {
+			setShowDialog(1)
+		} else {
+			setShowDialog(3)
+		}
 	}
 
 	return (<main className="checkout-content">

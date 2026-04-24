@@ -1,19 +1,27 @@
-import { useEffect, useState } from "react"
+import { useOutletContext, useRouteLoaderData } from "react-router"
 import { randomInt } from "../helpers/Converter"
-import { useRouteLoaderData } from "react-router"
+import { useEffect, useState } from "react"
 
 export default function Tickets() {
+	const [showDialog, setShowDialog] = useOutletContext()
 	const tickets = useRouteLoaderData("tickets")
+	const [barCode, setBarCode] = useState([])
 
 	function returnRandomBarCode() {
 		let bar = []
-		while (bar.length <= 11) {
-			bar.push(randomInt(2, 5))
+		while (bar.length <= 30) {
+			bar.push(randomInt(2, 7))
 		}
 
-		return bar?.map((size, index) => <div className={`ticket-content__bar-line bar-width-${size}`}
-			key={"bar-code-strip-" + index}></div>)
+		setBarCode(bar?.map((size, index) => <div className={`ticket-content__item-bar-line bar-width-${size}`}
+			key={"bar-code-strip-" + index}></div>))
 	}
+
+	useEffect(() => {
+		setTimeout(() => {
+			returnRandomBarCode()
+		}, 500)
+	}, [barCode])
 
 	return (<main className="ticket-content tickets">
 		<article className="ticket-content__article">
@@ -40,69 +48,73 @@ export default function Tickets() {
 						</p>
 
 						<div className="ticket-content__item-wrapper">
-							<p className="ticket-content__item-seats">
-								<span className="ticket-content__item-seats-text">
-									Seats
-								</span>
-								<span className="ticket-content__item-seats-value">
-									{ticket?.seats?.map(obj => obj).join(", ")
-										|| "Standing"}
-								</span>
-							</p>
-							<p className="ticket-content__item-time">
-								<span className="ticket-content__item-time-text">
-									Time
-								</span>
-								<span className="ticket-content__item-time-value">
-									{ticket?.time || "Any"}
-								</span>
-							</p>
-							<p className="ticket-content__item-order">
-								<span className="ticket-content__item-order-text">
-									Order
-								</span>
-								<span className="ticket-content__item-order-value">
-									{ticket?.order || "000000"}
-								</span>
-							</p>
-						</div>
+							<div className="ticket-content__item-info">
+								<p className="ticket-content__item-seats">
+									<span className="ticket-content__item-seats-text">
+										Seats
+									</span>
+									<span className="ticket-content__item-seats-value">
+										{ticket?.seats?.map(obj => obj).join(", ")
+											|| "Standing"}
+									</span>
+								</p>
+								<p className="ticket-content__item-time">
+									<span className="ticket-content__item-time-text">
+										Time
+									</span>
+									<span className="ticket-content__item-time-value">
+										{ticket?.time || "Any"}
+									</span>
+								</p>
+								<p className="ticket-content__item-order">
+									<span className="ticket-content__item-order-text">
+										Order
+									</span>
+									<span className="ticket-content__item-order-value">
+										{ticket?.order || "000000"}
+									</span>
+								</p>
+							</div>
 
-						<div className="ticket-content__item-wrapper">
-							<p className="ticket-content__item-date">
-								<span className="ticket-content__item-date-text">
-									Date
-								</span>
-								<span className="ticket-content__item-date-value">
-									{ticket?.date
-										|| "Today"}
-								</span>
-							</p>
-							<p className="ticket-content__item-loc">
-								<span className="ticket-content__item-loc-text">
-									Location
-								</span>
-								<span className="ticket-content__item-loc-value">
-									{ticket?.location || "Here"}
-								</span>
-							</p>
-							<p className="ticket-content__item-payment">
-								<span className="ticket-content__item-payment-text">
-									Payment
-								</span>
-								<span className="ticket-content__item-payment-value">
-									{(ticket?.status && "Successful" || "Failed")}
-								</span>
-							</p>
+							<div className="ticket-content__item-info">
+								<p className="ticket-content__item-date">
+									<span className="ticket-content__item-date-text">
+										Date
+									</span>
+									<span className="ticket-content__item-date-value">
+										{ticket?.date
+											|| "Today"}
+									</span>
+								</p>
+								<p className="ticket-content__item-loc">
+									<span className="ticket-content__item-loc-text">
+										Location
+									</span>
+									<span className="ticket-content__item-loc-value">
+										{ticket?.cinema || "Here"}
+									</span>
+								</p>
+								<p className="ticket-content__item-payment">
+									<span className="ticket-content__item-payment-text">
+										Payment
+									</span>
+									<span className="ticket-content__item-payment-value">
+										{(ticket?.status && "Successful" || "Failed")}
+									</span>
+								</p>
+							</div>
 						</div>
 					</div>
-					<div className="ticket-content__bar">
-						{returnRandomBarCode()}
+					<div className="ticket-content__item-space">
+					</div>
+					<div className="ticket-content__item-bar">
+						{barCode}
 					</div>
 				</li>
 			})}
 		</ul>
 
-		<button className="ticket-content__button">
+		<button className="ticket-content__button" onClick={() => setShowDialog(2)}>
 			Download E-Ticket
 		</button>
 	</main>)
