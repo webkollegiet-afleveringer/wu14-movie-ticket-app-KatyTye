@@ -1,10 +1,11 @@
 import { IoShieldCheckmark } from "react-icons/io5";
 import { FaFileArrowDown } from "react-icons/fa6";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 
 export default function Overlay({ show, setShow }) {
 	const [tempShow, setTempShow] = useState(0)
+	const navigator = useNavigate()
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -13,7 +14,14 @@ export default function Overlay({ show, setShow }) {
 	}, [show])
 
 	return (<dialog className={`dialog-box${(show >= 1 && " showed" || " hidden")}`} open>
-		<div className="dialog-box__background" onClick={() => setShow(0)}>
+		<div className="dialog-box__background" onClick={() => {
+			setShow(0)
+			if (tempShow == 1) {
+				setTimeout(() => {
+					navigator("/")
+				}, 300)
+			}
+		}}>
 		</div>
 		<div className="dialog-box__content">
 			<div className="dialog-box__icon-wrapper">
