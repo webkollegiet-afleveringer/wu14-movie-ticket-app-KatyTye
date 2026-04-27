@@ -9,6 +9,7 @@ import Error from "./pages/Error"
 import Seats from "./pages/Seats"
 import Checkout from "./pages/Checkout"
 import Tickets from "./pages/Tickets"
+import Profile from "./pages/Profile"
 
 function App() {
 
@@ -27,6 +28,10 @@ function App() {
 				{
 					path: "/explore",
 					element: <Explore />
+				},
+				{
+					path: "/profile",
+					element: <Profile />
 				},
 				{
 					id: "movie",
