@@ -1,19 +1,20 @@
 import CardBackground from "../assets/icons/card_background.svg?react"
+import { useOutletContext, useRouteLoaderData } from "react-router"
 import MasterCard from "../assets/icons/mastercard.svg?react"
-import { randomInt } from "../helpers/Converter"
-import { useOutletContext } from "react-router"
-import { useEffect, useState } from "react"
 import { handlePurchase } from "../helpers/Purchase"
+import { randomInt } from "../helpers/Converter"
+import { useEffect, useState } from "react"
 
 export default function Checkout() {
+	const profileData = useRouteLoaderData("root")?.profile
+
+	const [cards, setCards] = useState(profileData?.cards || [])
 	const [showDialog, setShowDialog] = useOutletContext()
 	const [selected, setSelected] = useState(0)
-	const [cards, setCards] = useState([])
 	const [data, setData] = useState({})
 
 	useEffect(() => {
 		setData(JSON.parse(localStorage.getItem("movie_temp")))
-		setCards(JSON.parse(localStorage.getItem("movie_cards")))
 
 		setTimeout(() => {
 			localStorage.removeItem("movie_temp")
