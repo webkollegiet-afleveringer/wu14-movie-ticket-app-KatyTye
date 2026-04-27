@@ -12,7 +12,6 @@ export async function getFilledSeats(filledSeats = 10) {
 	}
 
 	addOccupiedNumbers().then(final => {
-		setOccupiedSeats(final)
 		return final
 	}).catch(console.error)
 
