@@ -16,7 +16,7 @@ function returnPrettyPageName(url) {
 			return "E-Ticket"
 		case url.includes("/checkout"):
 			return "Checkout"
-		case url.includes("/settings"):
+		case url.includes("/profile"):
 			return "Settings"
 		case url.includes("/plan"):
 			return "Saved Plan"
@@ -52,7 +52,7 @@ export default function Header() {
 						enableSearch == true && " active" || ""
 					)}`} />
 						|| (urlPath.includes("/details") && <BsBookmarkDash className="top-content__page-icon" />
-							|| ((urlPath.includes("/seats") || urlPath.includes("/checkout") || urlPath.includes("/tickets")) &&
+							|| ((urlPath.includes("/seats") || urlPath.includes("/checkout") || urlPath.includes("/tickets") || urlPath.includes("/profile")) &&
 								<div className="top-content__exbox"></div>
 								||
 								<></>)
