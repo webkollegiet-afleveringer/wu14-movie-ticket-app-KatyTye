@@ -36,19 +36,24 @@ const getLocation = () => new Promise((resolve, reject) => {
 
 export async function initialMovieFetches() {
 	if (!import.meta.env.VITE_PRODUCTION) {
+		const response = await fetch("http://localhost:3000/mymovies/profile", extraFetchHeader)
+		const profile = await response.json()
+
 		return {
 			trending: TrendingExample,
 			recommendations: RecommendationsExample,
 			commingSoon: CommingSoonExample,
-			cinema: CinemaExample
+			cinema: CinemaExample,
+			profile: profile?.result
 		}
 	} else {
 		const loc = await getLocation()
-		const [trendingRes, recommendationsRes, commingSoonRes, cinemaRes] = await Promise.all([
+		const [trendingRes, recommendationsRes, commingSoonRes, cinemaRes, profileRes] = await Promise.all([
 			fetch(`${import.meta.env.VITE_API_URL}/trending/movie/week`, fetchHeader),
 			fetch(`${import.meta.env.VITE_API_URL}/movie/634649/recommendations`, fetchHeader),
 			fetch(`${import.meta.env.VITE_API_URL}/movie/upcoming`, fetchHeader),
-			fetch(`${import.meta.env.VITE_GEO_API_URL}&filter=circle:${loc.lon},${loc.lat},5000&bias=proximity:${loc.lon},${loc.lat}&limit=10&apiKey=${import.meta.env.VITE_GEO_API_KEY}`)
+			fetch(`${import.meta.env.VITE_GEO_API_URL}&filter=circle:${loc.lon},${loc.lat},5000&bias=proximity:${loc.lon},${loc.lat}&limit=10&apiKey=${import.meta.env.VITE_GEO_API_KEY}`),
+			fetch(`${import.meta.env.VITE_PRM_API_URL}/profile`, extraFetchHeader)
 		])
 
 		const trending = await trendingRes.json()
@@ -60,7 +65,8 @@ export async function initialMovieFetches() {
 			trending: trending.results,
 			recommendations: recommendations.results,
 			commingSoon: commingSoon.results,
-			cinema: cinema.features
+			cinema: cinema.features,
+			profile: profileRes
 		}
 	}
 }

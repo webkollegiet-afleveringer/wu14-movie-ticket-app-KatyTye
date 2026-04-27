@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { Link, useLocation, useRouteLoaderData } from "react-router";
 import { BsBookmarkDash } from "react-icons/bs";
 import { GoChevronLeft } from "react-icons/go";
 import { IoIosSearch } from "react-icons/io";
-import { Link, useLocation } from "react-router";
+import { useState } from "react";
 
 function returnPrettyPageName(url) {
 	switch (true) {
@@ -25,6 +25,7 @@ function returnPrettyPageName(url) {
 
 export default function Header() {
 	const [enableSearch, setEnableSearch] = useState(false)
+	const data = useRouteLoaderData("root")
 	const urlPath = useLocation()?.pathname
 	const lastPath = urlPath.split("/")[2]
 
@@ -33,7 +34,7 @@ export default function Header() {
 			{(urlPath == "/" && <>
 				<div className="top-content__profile-wrapper">
 					<p className="top-content__profile-message">Welcome Back,</p>
-					<p className="top-content__profile-user">USER</p>
+					<p className="top-content__profile-user">{data?.profile?.display}</p>
 				</div>
 
 				<Link to={"/profile"} className="top-content__profile-link">
