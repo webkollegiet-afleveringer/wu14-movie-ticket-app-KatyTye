@@ -1,13 +1,14 @@
 import { convertDateToText, randomInt, returnDateAndTime } from "../helpers/Converter"
 import { useNavigate, useParams, useRouteLoaderData } from "react-router"
 import MovieScreen from "../assets/icons/screen.svg?react"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 export default function Seats() {
-	const [occupiedSeats, setOccupiedSeats] = useState([])
+	const movie = useRouteLoaderData("movie")
+
+	const [occupiedSeats, setOccupiedSeats] = useState(movie?.filled_seats || [])
 	const [selectedSeats, setSelectedSeats] = useState([])
 	const movieData = useRouteLoaderData("root")
-	const movie = useRouteLoaderData("movie")
 	const Navigator = useNavigate()
 	const movieID = useParams().id
 	let loadedSeats = 0
@@ -16,34 +17,6 @@ export default function Seats() {
 		[{ rows: 3 }, { rows: 4 }, { rows: 4 }, { rows: 4 }, { rows: 4 }, { rows: 3 }],
 		[{ rows: 3 }, { rows: 4 }, { rows: 4 }, { rows: 4 }, { rows: 4 }, { rows: 3 }]
 	]
-
-	useEffect(() => {
-		let movieSeats = JSON.parse(localStorage.getItem("movie_seats")) || {};
-
-		if (!movieSeats[movieID]) {
-			let cancelled = false;
-
-			async function addOccupiedNumbers(limit = 10) {
-				const temp = []
-				while (!cancelled && temp.length < limit) {
-					const newNumber = randomInt(1, 44)
-					if (!temp.includes(newNumber)) temp.push(newNumber)
-					await new Promise(r => setTimeout(r, 0))
-				}
-				return temp
-			}
-
-			addOccupiedNumbers(20).then(final => {
-				setOccupiedSeats(final)
-				movieSeats[movieID] = final
-				localStorage.setItem("movie_seats", JSON.stringify(movieSeats))
-			}).catch(console.error)
-
-			return () => { cancelled = true }
-		} else {
-			setOccupiedSeats(movieSeats[movieID])
-		}
-	}, []);
 
 	function toggleSeat(evt) {
 		let number = Number(evt.target.getAttribute("data-set-seat")) || 1

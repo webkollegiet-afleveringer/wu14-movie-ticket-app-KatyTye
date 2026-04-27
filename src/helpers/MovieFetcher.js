@@ -4,6 +4,7 @@ import TrendingExample from '../assets/data/trending.json';
 import CinemaExample from '../assets/data/cinema.json';
 import MovieExample from '../assets/data/movie.json';
 import CrewExample from '../assets/data/crew.json';
+import { data } from 'react-router';
 
 const fetchHeader = {
 	method: 'GET',
@@ -74,24 +75,31 @@ export async function initialMovieFetches() {
 export async function fetchMovieFromID(id) {
 
 	if (!import.meta.env.VITE_PRODUCTION) {
+		const response = await fetch(`http://localhost:3000/mymovies/seats/${id}`, extraFetchHeader)
+		const data = await response.json()
+
 		return {
 			...MovieExample,
+			filled_seats: data.result,
 			director: CrewExample.crew.find(p => p.job === "Director").name
 		}
 	} else {
-		const [movieRes, creditsRes] = await Promise.all([
+		const [movieRes, creditsRes, seatsRes] = await Promise.all([
 			fetch(`${import.meta.env.VITE_API_URL}/movie/${id}`, fetchHeader),
-			fetch(`${import.meta.env.VITE_API_URL}/movie/${id}/credits`, fetchHeader)
+			fetch(`${import.meta.env.VITE_API_URL}/movie/${id}/credits`, fetchHeader),
+			fetch(`${import.meta.env.VITE_PRM_API_PATH}/seats/${id}`, extraFetchHeader)
 		])
 
 		const movie = await movieRes.json()
 		const credits = await creditsRes.json()
+		const seats = await seatsRes.json()
 
 		const director = credits.crew.find(p => p.job === "Director")
 
 		return ({
 			...movie,
-			director: director ? director.name : "Unknown"
+			director: director ? director.name : "Unknown",
+			filled_seats: seats.result
 		})
 	}
 }
