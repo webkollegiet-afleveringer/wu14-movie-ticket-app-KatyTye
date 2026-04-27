@@ -24,26 +24,24 @@ export default function Seats() {
 			let cancelled = false;
 
 			async function addOccupiedNumbers(limit = 10) {
-				const temp = [];
+				const temp = []
 				while (!cancelled && temp.length < limit) {
-					const newNumber = randomInt(1, 44);
-					if (!temp.includes(newNumber)) temp.push(newNumber);
-					await new Promise(r => setTimeout(r, 0));
+					const newNumber = randomInt(1, 44)
+					if (!temp.includes(newNumber)) temp.push(newNumber)
+					await new Promise(r => setTimeout(r, 0))
 				}
-				return temp;
+				return temp
 			}
 
 			addOccupiedNumbers(20).then(final => {
-				setOccupiedSeats(final);
-				movieSeats[movieID] = final;
-				localStorage.setItem("movie_seats", JSON.stringify(movieSeats));
-				console.log(JSON.stringify(movieSeats));
-				console.log(final);
-			}).catch(console.error);
+				setOccupiedSeats(final)
+				movieSeats[movieID] = final
+				localStorage.setItem("movie_seats", JSON.stringify(movieSeats))
+			}).catch(console.error)
 
-			return () => { cancelled = true; };
+			return () => { cancelled = true }
 		} else {
-			setOccupiedSeats(movieSeats[movieID]);
+			setOccupiedSeats(movieSeats[movieID])
 		}
 	}, []);
 
