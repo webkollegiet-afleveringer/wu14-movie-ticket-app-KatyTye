@@ -2,3 +2,75 @@
 @use "./_valuables.sass" as var
 
 // STYLING FOR PROFILE PAGE
+.profile-content
+	padding: 0 25px 25px 25px
+
+	&__section
+
+		&-title
+			font-size: 20px
+
+		&-button
+			gap: 15px
+			width: 100%
+			height: 50px
+			border: none
+			display: flex
+			margin-top: 25px
+			align-items: center
+			text-decoration: none
+			color: var.$text-color
+			background: transparent
+
+			&-name
+				font-size: 18px
+
+			&-wrapper
+				width: 50px
+				height: 50px
+				padding: 13px
+				border-radius: var.$box-radius
+
+				&.bg-
+					&db
+						background: var.$user-personal-color
+					&lb
+						background: var.$user-email-color
+					&lr
+						background: var.$user-logout-color
+
+			&-arrow
+				width: 30px
+				height: 30px
+				margin-left: auto
+
+	&__line
+		width: 100%
+		height: 1.52px
+		margin: 30px 0 25px 0
+		background: rgba(var.$text-color, 0.3)
+
+	&__wrapper
+
+		&-name
+			font-weight: bold
+			font-size: 18px
+
+		&-title
+			font-size: 14px
+			color: var.$second-text-color
+
+	&__top
+		gap: 15px
+		display: flex
+		align-items: center
+
+		&-image
+			width: 50px
+			height: 50px
+			border-radius: var.$box-radius
+
+		&-arrow
+			width: 30px
+			height: 30px
+			margin-left: auto

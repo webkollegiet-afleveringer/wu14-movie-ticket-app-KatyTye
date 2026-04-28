@@ -20,7 +20,7 @@ export default function Profile() {
 				<p className="profile-content__wrapper-title">Film Hunter</p>
 			</div>
 
-			<GoChevronRight className="profile-content__profile-arrow" />
+			<GoChevronRight className="profile-content__top-arrow" />
 		</div>
 
 		<div className="profile-content__line"></div>
@@ -31,7 +31,7 @@ export default function Profile() {
 			</h2>
 
 			<button className="profile-content__section-button">
-				<div className="profile-content__section-button-wrapper">
+				<div className="profile-content__section-button-wrapper bg-db">
 					<GraphSVG className="profile-content__section-button-img" />
 				</div>
 
@@ -43,7 +43,7 @@ export default function Profile() {
 			</button>
 
 			<button className="profile-content__section-button">
-				<div className="profile-content__section-button-wrapper">
+				<div className="profile-content__section-button-wrapper bg-lb">
 					<UserSVG className="profile-content__section-button-img" />
 				</div>
 
@@ -55,7 +55,7 @@ export default function Profile() {
 			</button>
 
 			<button className="profile-content__section-button">
-				<div className="profile-content__section-button-wrapper">
+				<div className="profile-content__section-button-wrapper bg-lr">
 					<FaTrash className="profile-content__section-button-img" />
 				</div>
 
@@ -75,7 +75,7 @@ export default function Profile() {
 			</h2>
 
 			<button className="profile-content__section-button">
-				<div className="profile-content__section-button-wrapper">
+				<div className="profile-content__section-button-wrapper bg-db">
 					<FaBell className="profile-content__section-button-img" />
 				</div>
 
@@ -87,7 +87,7 @@ export default function Profile() {
 			</button>
 
 			<Link to={"/tickets"} className="profile-content__section-button">
-				<div className="profile-content__section-button-wrapper">
+				<div className="profile-content__section-button-wrapper bg-lb">
 					<TicketSVG className="profile-content__section-button-img" />
 				</div>
 
@@ -99,7 +99,7 @@ export default function Profile() {
 			</Link>
 
 			<button className="profile-content__section-button">
-				<div className="profile-content__section-button-wrapper">
+				<div className="profile-content__section-button-wrapper bg-lr">
 					<IoExit className="profile-content__section-button-img" />
 				</div>
 
