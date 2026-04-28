@@ -1,6 +1,8 @@
 import { useOutletContext, useRouteLoaderData } from "react-router"
 import { randomInt } from "../helpers/Converter"
 import { useEffect, useState } from "react"
+import { toPng } from 'html-to-image';
+import { jsPDF } from "jspdf";
 
 export default function Tickets() {
 	const [showDialog, setShowDialog] = useOutletContext()
@@ -23,6 +25,17 @@ export default function Tickets() {
 		}, 500)
 	}, [barCode])
 
+	async function downloadTickets() {
+		setShowDialog(2)
+
+		const el = document.querySelector("#tickets")
+
+		const dataUrl = await toPng(el, { backgroundColor: '#fff', cacheBust: true });
+		const pdf = new jsPDF({ unit: 'px', format: [el.offsetWidth, el.offsetHeight + 30] });
+		pdf.addImage(dataUrl, 'PNG', 0, 0, el.offsetWidth, el.offsetHeight);
+		pdf.save('export.pdf');
+	}
+
 	return (<main className="ticket-content tickets">
 		<article className="ticket-content__article">
 			<h2 className="ticket-content__article-title">
@@ -33,7 +46,7 @@ export default function Tickets() {
 			</p>
 		</article>
 
-		<ul className="ticket-content__list">
+		<ul className="ticket-content__list" id="tickets">
 			{tickets?.map((ticket, index) => {
 				return <li key={"ticket-" + index} className="ticket-content__item">
 					<div className="ticket-content__item-content">
@@ -114,7 +127,7 @@ export default function Tickets() {
 			})}
 		</ul>
 
-		<button className="ticket-content__button" onClick={() => setShowDialog(2)}>
+		<button className="ticket-content__button" onClick={() => downloadTickets()}>
 			Download E-Ticket
 		</button>
 	</main>)
