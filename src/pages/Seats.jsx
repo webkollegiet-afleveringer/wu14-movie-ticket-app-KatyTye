@@ -121,13 +121,13 @@ export default function Seats() {
 			<div className="seats-content__form-seats">
 				{seatLayout.map((box, idx) => {
 					return (<div className={`seats-content__form-seats-${(idx == 0 && "left" || "right")}`}
-						key={"form-side-", idx}>
+						key={`form-side-${idx}`}>
 						{box.map((seat, index) => {
 							return (seat.rows == 3 && <div className={`seats-content__form-seats-${(idx == 0 && "left" || "right")}-special`}
-								key={"seat-row-", index}>
+								key={`seat-row-${index}`}>
 								{returnSeatButtons(seat.rows)}
 							</div> || <div className={`seats-content__form-seats-${(idx == 0 && "left" || "right")}-middle`}
-								key={"seat-row-", index}>
+								key={`seat-row-${index}`}>
 									{returnSeatButtons(seat.rows)}
 								</div>)
 						})}

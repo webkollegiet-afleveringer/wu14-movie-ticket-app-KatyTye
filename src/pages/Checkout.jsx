@@ -58,7 +58,7 @@ export default function Checkout() {
 					</h2>
 					<ul className="checkout-content__cards-list">
 						{cards?.map((card, index) => {
-							return (<li key={"card-", index} className="checkout-content__cards-item">
+							return (<li key={`card-${index}`} className="checkout-content__cards-item">
 								<div className="checkout-content__cards-item-top">
 									<MasterCard className="checkout-content__cards-item-logo" />
 									<div className="checkout-content__cards-item-wrapper">
