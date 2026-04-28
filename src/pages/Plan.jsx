@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
-import { FaStar, FaTrash } from "react-icons/fa"
+import { FaMinus, FaPlus, FaStar, FaTrash } from "react-icons/fa"
 import { returnDateAndTime } from "../helpers/Converter"
+import { Link } from "react-router"
 
 export default function Plan() {
 	const [selected, setSelected] = useState(0)
-	const [amount, setAmount] = useState(0)
+	const [amount, setAmount] = useState(1)
 	const [plans, setPlans] = useState([])
 
 	useEffect(() => {
@@ -14,7 +15,7 @@ export default function Plan() {
 	}, [])
 
 	useEffect(() => {
-		setAmount(plans[selected]?.people || 0)
+		setAmount(plans[selected]?.people || 1)
 	}, [selected])
 
 	return (<main className="plan-content plan">
@@ -51,7 +52,7 @@ export default function Plan() {
 							<p className="plan-content__item-profile-rated">
 								<FaStar className="plan-content__item-profile-rated-star" />
 								<span className="plan-content__item-profile-rated-text">
-									{plan?.rated}
+									{plan?.rated.toFixed(1)}
 								</span>
 							</p>
 						</div>
@@ -107,18 +108,24 @@ export default function Plan() {
 									</select>
 								</label>
 								<div className="plan-content__item-person-wrapper">
-									<button type="button"
-										className="plan-content__item-person-up"></button>
-									<p className="plan-content__item-person-amount">
-										{amount}
-									</p>
-									<button type="button"
-										className="plan-content__item-person-down"></button>
+									<p className="plan-content__item-person-title">Person</p>
+									<div className="plan-content__item-person-div">
+										<div className="plan-content__item-person-down">
+											<FaMinus />
+										</div>
+										<p className="plan-content__item-person-amount">
+											{amount}
+										</p>
+										<div className="plan-content__item-person-up">
+											<FaPlus />
+										</div>
+									</div>
 								</div>
 							</div>
 							<div className="plan-content__form-wrapper">
-								<button type="submit"
-									className="plan-content__form-checkout">Checkout</button>
+								<Link className="plan-content__form-checkout"><span>
+									Checkout
+								</span></Link>
 								<button type="button" className="plan-content__form-delete">
 									<FaTrash className="plan-content__form-delete-icon" />
 								</button>
