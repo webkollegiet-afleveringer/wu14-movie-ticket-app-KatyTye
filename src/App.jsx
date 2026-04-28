@@ -10,6 +10,7 @@ import Seats from "./pages/Seats"
 import Checkout from "./pages/Checkout"
 import Tickets from "./pages/Tickets"
 import Profile from "./pages/Profile"
+import Plan from "./pages/Plan"
 
 function App() {
 
@@ -48,6 +49,10 @@ function App() {
 							element: <Seats />
 						}
 					]
+				},
+				{
+					path: "/plan",
+					element: <Plan />
 				},
 				{
 					path: "/checkout",
