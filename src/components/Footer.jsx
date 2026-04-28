@@ -8,7 +8,7 @@ export default function Footer() {
 	const urlPath = useLocation()?.pathname
 
 	return ((urlPath == "/" || urlPath.includes("explore") || urlPath.includes("explore")
-		|| urlPath.includes("settings") || urlPath.includes("plan")) &&
+		|| urlPath.includes("profile") || urlPath.includes("plan")) &&
 		<footer className="bottom-content">
 			<NavLink className={"bottom-content__link"} to={"/"}>
 				<PiHouseFill className="bottom-content__link-icon" />
