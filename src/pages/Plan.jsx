@@ -1,22 +1,62 @@
-import { useEffect, useState } from "react"
 import { FaMinus, FaPlus, FaStar, FaTrash } from "react-icons/fa"
-import { returnDateAndTime } from "../helpers/Converter"
-import { Link } from "react-router"
+import { randomInt, returnDateAndTime } from "../helpers/Converter"
+import { Link, useNavigate } from "react-router"
+import { useEffect, useState } from "react"
 
 export default function Plan() {
 	const [selected, setSelected] = useState(0)
 	const [amount, setAmount] = useState(1)
+	const [cinema, setCinema] = useState(0)
 	const [plans, setPlans] = useState([])
+	const [dates, setDate] = useState("")
+	const [times, setTime] = useState("")
+	const Navigator = useNavigate()
 
 	useEffect(() => {
 		if (localStorage.getItem("mymovies-plan")) {
-			setPlans(JSON.parse(localStorage.getItem("mymovies-plan")) || [])
+			const newData = JSON.parse(localStorage.getItem("mymovies-plan"))
+			setPlans(newData || [])
+
+			if (newData?.length && newData?.length >= 1) {
+				setAmount(newData[0]?.people)
+				setDate(newData[0]?.date)
+				setTime(newData[0]?.time)
+			}
 		}
 	}, [])
 
 	useEffect(() => {
-		setAmount(plans[selected]?.people || 1)
+		if (plans.length >= 1) {
+			setAmount(plans[selected]?.people || 1)
+			setDate(plans[selected]?.date)
+			setTime(plans[selected]?.time)
+		}
 	}, [selected])
+
+	function deletePlan() {
+		localStorage.setItem("mymovies-plan", JSON.stringify(plans.filter((plan, idx) => idx != selected)))
+		setPlans(plans.filter((plan, idx) => idx != selected))
+		setSelected(0)
+	}
+
+	function checkoutPlan(event) {
+		event.preventDefault()
+
+		const elm = event.target.elements
+		const data = plans[selected]
+
+		localStorage.setItem("movie_temp", JSON.stringify({
+			id: data?.movie,
+			name: data?.name,
+			price: (randomInt(9, 29) * amount),
+			cinema: data?.cinemas[cinema],
+			date: dates,
+			time: times,
+			seats: data?.seats
+		}))
+
+		Navigator("/checkout")
+	}
 
 	return (<main className="plan-content plan">
 		{(plans.length == 0 && <p className="plan-content__error">
@@ -56,12 +96,13 @@ export default function Plan() {
 								</span>
 							</p>
 						</div>
-						<form className="plan-content__item-form">
+						<form className="plan-content__item-form"
+							onSubmit={evt => checkoutPlan(evt)}>
 							<label htmlFor="cinema" className="plan-content__item-cinema">
 								<span className="plan-content__item-cinema-text">
 									Cinema
 								</span>
-								<select name="cinema" id="cinema"
+								<select name="cinema" id="cinema" onChange={evt => setCinema(evt?.target?.value)}
 									className="plan-content__item-cinema-select">
 									{plan?.cinemas?.map((cinema, index) => {
 										return <option key={`cinema-${index}`} value={cinema}>
@@ -75,7 +116,7 @@ export default function Plan() {
 									<span className="plan-content__item-date-text">
 										Date
 									</span>
-									<select name="date" id="date"
+									<select name="date" id="date" onChange={evt => setDate(evt?.target?.value)}
 										className="plan-content__item-date-select">
 										<option value={plan?.date}>
 											{plan?.date}
@@ -86,7 +127,7 @@ export default function Plan() {
 									<span className="plan-content__item-time-text">
 										Time
 									</span>
-									<select name="time" id="time"
+									<select name="time" id="time" onChange={evt => setTime(evt?.target?.value)}
 										className="plan-content__item-time-select">
 										{(returnDateAndTime()?.times?.map((time, index) => {
 											if (index <= 6 || index >= 22 || `${index / 2}`.includes(".")) { return }
@@ -110,23 +151,27 @@ export default function Plan() {
 								<div className="plan-content__item-person-wrapper">
 									<p className="plan-content__item-person-title">Person</p>
 									<div className="plan-content__item-person-div">
-										<div className="plan-content__item-person-down">
+										<div className="plan-content__item-person-down"
+											onClick={() => amount >= 2 && setAmount(amount - 1)}>
 											<FaMinus />
 										</div>
 										<p className="plan-content__item-person-amount">
 											{amount}
 										</p>
-										<div className="plan-content__item-person-up">
+										<div className="plan-content__item-person-up"
+											onClick={() => setAmount(amount + 1)}>
 											<FaPlus />
 										</div>
 									</div>
 								</div>
 							</div>
 							<div className="plan-content__form-wrapper">
-								<Link className="plan-content__form-checkout"><span>
-									Checkout
-								</span></Link>
-								<button type="button" className="plan-content__form-delete">
+								<button className="plan-content__form-checkout"
+									type="submit"><span>
+										Checkout
+									</span></button>
+								<button type="button" className="plan-content__form-delete"
+									onClick={() => deletePlan()}>
 									<FaTrash className="plan-content__form-delete-icon" />
 								</button>
 							</div>
