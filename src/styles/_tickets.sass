@@ -17,9 +17,9 @@
 
 	&__item
 		padding: 25px
+		min-width: 100%
 		overflow: hidden
 		color: var.$ticket-text-color
-		min-width: calc(100dvw - 50px)
 		border-radius: var.$box-radius
 		background: var.$ticket-background-color
 
@@ -47,7 +47,8 @@
 		&-bar
 			height: 60px
 			display: flex
-			margin: 0 25px
+			margin: 0 auto
+			max-width: 250px
 			width: calc(100% - 50px)
 			justify-content: space-between
 

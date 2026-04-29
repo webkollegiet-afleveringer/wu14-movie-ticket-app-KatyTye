@@ -33,12 +33,16 @@
 		background: rgba(var.$overlay-color, 0.5)
 
 	&__content
+		left: 50%
 		z-index: 12
+		width: 100%
 		padding: 25px
 		bottom: -100%
 		position: fixed
+		max-width: 600px
 		padding-top: 75px
 		color: var.$text-color
+		transform: translateX(-50%)
 		transition: bottom 0.5s linear
 		border-radius: 60px 60px 20px 20px
 		background: var.$window-background-color
