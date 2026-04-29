@@ -5,6 +5,9 @@
 .plan-content
 	padding: 0 25px 25px 25px
 
+	&__list
+		list-style-type: none
+
 	&__form
 
 		&-delete
@@ -40,9 +43,15 @@
 			grid-template-columns: 3fr 1fr
 
 	&__item
-		// height: 50px
+		height: 130px
 		overflow: hidden
 		transition: height 0.3s linear
+
+		&:nth-of-type(n+2)
+			margin-top: 30px
+
+		&.open
+			height: 551px
 
 		&-person
 

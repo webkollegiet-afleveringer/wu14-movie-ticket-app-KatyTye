@@ -25,7 +25,7 @@ export default function Plan() {
 			<ol className="plan-content__list">
 				{plans?.map((plan, index) => {
 					return <li className={`plan-content__item${(selected == index && " open" || " closed")}`}
-						key={`plan-${index}`}>
+						key={`plan-${index}`} onClick={() => setSelected(index)}>
 						<h2 className="plan-content__item-title">
 							<span className="plan-content__item-number">
 								{index + 1}.
