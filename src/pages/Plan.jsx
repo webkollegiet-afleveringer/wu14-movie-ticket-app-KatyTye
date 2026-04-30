@@ -71,7 +71,7 @@ export default function Plan() {
 								{index + 1}.
 							</span>
 							<span className="plan-content__item-text">
-								{plan?.date.replaceAll("/", " ")}
+								{plan?.dates[0].replaceAll("/", " ")}
 							</span>
 						</h2>
 
@@ -118,9 +118,11 @@ export default function Plan() {
 									</span>
 									<select name="date" id="date" onChange={evt => setDate(evt?.target?.value)}
 										className="plan-content__item-date-select">
-										<option value={plan?.date}>
-											{plan?.date}
-										</option>
+										{(plan?.dates?.map((date, index) => {
+											return <option value={date} key={`option-date-${index}`}>
+												{date}
+											</option>
+										}))}
 									</select>
 								</label>
 								<label htmlFor="time" className="plan-content__item-time">
@@ -129,7 +131,7 @@ export default function Plan() {
 									</span>
 									<select name="time" id="time" onChange={evt => setTime(evt?.target?.value)}
 										className="plan-content__item-time-select">
-										{(returnDateAndTime()?.times?.map((time, index) => {
+										{(plan?.times?.map((time, index) => {
 											if (index <= 6 || index >= 22 || `${index / 2}`.includes(".")) { return }
 											return <option value={time} key={`option-time-${index}`}>
 												{time}
