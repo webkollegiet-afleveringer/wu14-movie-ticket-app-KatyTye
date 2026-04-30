@@ -1,0 +1,82 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+
+// STYLING FOR DETAILS PAGE
+.page-content.details
+	padding: 0 25px 25px 25px
+
+	& .details
+		&__button
+			padding: 15px
+			display: block
+			cursor: pointer
+			margin-top: 25px
+			text-align: center
+			text-decoration: none
+			color: var.$text-color
+			border-radius: var.$box-radius
+			background: var.$button-background-color
+
+		&__description
+			font-size: 14px
+			color: var.$description-color
+
+			&-button
+				cursor: pointer
+				color: var.$icon-hover-color
+
+		&__article
+			&-tag
+				font-size: 12px
+				padding: 6px 18px
+				background: var.$tag-color
+				border-radius: var.$box-radius
+				color: var.$movie-direct-color
+
+				&s
+					gap: 10px
+					display: flex
+					flex-wrap: wrap
+					margin-top: 10px
+					list-style-type: none
+
+			&-title, &-title-disc
+				margin-top: 15px
+				font-size: 20px
+				font-weight: normal
+
+				&-disc
+					margin: 25px 0 10px 0
+
+			&-short-description
+				gap: 5px
+				display: flex
+				color: var.$movie-direct-color
+
+				& svg
+					height: 18px
+					margin: auto 0
+					margin-left: 5px
+					width: fit-content
+					color: var.$star-icon-color
+
+		&__image
+			width: 250px
+			height: auto
+			border-radius: var.$img-radius
+
+			&s
+				display: flex
+				scrollbar-width: none
+				justify-content: center
+				overflow: scroll hidden
+
+.plan-button
+	top: 25px
+	right: 25px
+	width: 30px
+	height: 30px
+	border: none
+	cursor: pointer
+	position: absolute
+	background: transparent
