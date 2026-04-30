@@ -1,0 +1,423 @@
+[
+	{
+		"adult": false,
+		"backdrop_path": "/tPpYGm2mVecue7Bk3gNVoSPA5qn.jpg",
+		"id": 315635,
+		"title": "Spider-Man: Homecoming",
+		"original_title": "Spider-Man: Homecoming",
+		"overview": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+		"poster_path": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 27.031,
+		"release_date": "2017-07-05",
+		"video": false,
+		"vote_average": 7.331,
+		"vote_count": 23040
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/wdwcOBMkt3zmPQuEMxB3FUtMio2.jpg",
+		"id": 271110,
+		"title": "Captain America: Civil War",
+		"original_title": "Captain America: Civil War",
+		"overview": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
+		"poster_path": "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			12,
+			28,
+			878
+		],
+		"popularity": 19.1802,
+		"release_date": "2016-04-27",
+		"video": false,
+		"vote_average": 7.447,
+		"vote_count": 23912
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/6al048Lat3eLVQOuKtc9h6Tu94d.jpg",
+		"id": 558,
+		"title": "Spider-Man 2",
+		"original_title": "Spider-Man 2",
+		"overview": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act on his feelings for Mary Jane Watson, a girl he's loved since childhood. A certain anger begins to brew in his best friend Harry Osborn as well...",
+		"poster_path": "/eg8XHjA7jkM3ulBLnfGTczR9ytI.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 9.9264,
+		"release_date": "2004-06-25",
+		"video": false,
+		"vote_average": 7.304,
+		"vote_count": 16235
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/HVcza6tJtWFrLriuh3Ano4Vt46.jpg",
+		"id": 1930,
+		"title": "The Amazing Spider-Man",
+		"original_title": "The Amazing Spider-Man",
+		"overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+		"poster_path": "/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 17.3812,
+		"release_date": "2012-06-23",
+		"video": false,
+		"vote_average": 6.732,
+		"vote_count": 18398
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/k0hlAzTryCYX1O1LyC6P8tAa8s0.jpg",
+		"id": 102382,
+		"title": "The Amazing Spider-Man 2",
+		"original_title": "The Amazing Spider-Man 2",
+		"overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+		"poster_path": "/bU7nTmvmy0h3VUP01v1T2imgH6N.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 21.1382,
+		"release_date": "2014-04-16",
+		"video": false,
+		"vote_average": 6.532,
+		"vote_count": 14127
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
+		"id": 447365,
+		"title": "Guardians of the Galaxy Vol. 3",
+		"original_title": "Guardians of the Galaxy Vol. 3",
+		"overview": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+		"poster_path": "/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			878,
+			12,
+			28
+		],
+		"popularity": 18.0609,
+		"release_date": "2023-05-03",
+		"video": false,
+		"vote_average": 7.923,
+		"vote_count": 8188
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/m8JTwHFwX7I7JY5fPe4SjqejWag.jpg",
+		"id": 640146,
+		"title": "Ant-Man and the Wasp: Quantumania",
+		"original_title": "Ant-Man and the Wasp: Quantumania",
+		"overview": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+		"poster_path": "/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 10.3947,
+		"release_date": "2023-02-15",
+		"video": false,
+		"vote_average": 6.229,
+		"vote_count": 5758
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/ufpeVEM64uZHPpzzeiDNIAdaeOD.jpg",
+		"id": 533535,
+		"title": "Deadpool & Wolverine",
+		"original_title": "Deadpool & Wolverine",
+		"overview": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+		"poster_path": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			35,
+			878
+		],
+		"popularity": 35.724,
+		"release_date": "2024-07-24",
+		"video": false,
+		"vote_average": 7.558,
+		"vote_count": 8490
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/aJn9XeesqsrSLKcHfHP4u5985hn.jpg",
+		"id": 283995,
+		"title": "Guardians of the Galaxy Vol. 2",
+		"original_title": "Guardians of the Galaxy Vol. 2",
+		"overview": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
+		"poster_path": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			878,
+			12,
+			28
+		],
+		"popularity": 16.2698,
+		"release_date": "2017-04-19",
+		"video": false,
+		"vote_average": 7.609,
+		"vote_count": 22810
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/9xfDWXAUbFXQK585JvByT5pEAhe.jpg",
+		"id": 569094,
+		"title": "Spider-Man: Across the Spider-Verse",
+		"original_title": "Spider-Man: Across the Spider-Verse",
+		"overview": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse's very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+		"poster_path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			16,
+			28,
+			12,
+			878
+		],
+		"popularity": 28.2436,
+		"release_date": "2023-05-31",
+		"video": false,
+		"vote_average": 8.333,
+		"vote_count": 8466
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/2nyaeISu2xIxIgZYNpX4UayY8PN.jpg",
+		"id": 141052,
+		"title": "Justice League",
+		"original_title": "Justice League",
+		"overview": "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+		"poster_path": "/eifGNCSDuxJeS1loAXil5bIGgvC.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 9.681,
+		"release_date": "2017-11-15",
+		"video": false,
+		"vote_average": 6.071,
+		"vote_count": 13603
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/yF1eOkaYvwiORauRCPWznV9xVvi.jpg",
+		"id": 298618,
+		"title": "The Flash",
+		"original_title": "The Flash",
+		"overview": "When his attempt to save his family inadvertently alters the future, Barry Allen becomes trapped in a reality in which General Zod has returned and there are no Super Heroes to turn to. In order to save the world that he is in and return to the future that he knows, Barry's only hope is to race for his life. But will making the ultimate sacrifice be enough to reset the universe?",
+		"poster_path": "/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			878,
+			12
+		],
+		"popularity": 12.6878,
+		"release_date": "2023-06-13",
+		"video": false,
+		"vote_average": 6.616,
+		"vote_count": 4932
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/AdyJH8kDm8xT8IKTlgpEC15ny4u.jpg",
+		"id": 453395,
+		"title": "Doctor Strange in the Multiverse of Madness",
+		"original_title": "Doctor Strange in the Multiverse of Madness",
+		"overview": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
+		"poster_path": "/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			14,
+			28,
+			12
+		],
+		"popularity": 16.3273,
+		"release_date": "2022-05-04",
+		"video": false,
+		"vote_average": 7.225,
+		"vote_count": 10217
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg",
+		"id": 986056,
+		"title": "Thunderbolts*",
+		"original_title": "Thunderbolts*",
+		"overview": "After finding themselves ensnared in a death trap, seven disillusioned castoffs must embark on a dangerous mission that will force them to confront the darkest corners of their pasts.",
+		"poster_path": "/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			878,
+			12
+		],
+		"popularity": 22.5639,
+		"release_date": "2025-04-30",
+		"video": false,
+		"vote_average": 7.292,
+		"vote_count": 3395
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/83H0C66AcvkwpG2738VCTHMY9uv.jpg",
+		"id": 505642,
+		"title": "Black Panther: Wakanda Forever",
+		"original_title": "Black Panther: Wakanda Forever",
+		"overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+		"poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 13.9245,
+		"release_date": "2022-11-09",
+		"video": false,
+		"vote_average": 7.006,
+		"vote_count": 7393
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/JdT3ywizJIICTZCb4dteyCspON.jpg",
+		"id": 609681,
+		"title": "The Marvels",
+		"original_title": "The Marvels",
+		"overview": "When her duties send her to an anomalous wormhole linked to a Kree revolutionary, Carol's powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol's estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+		"poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			878,
+			12,
+			28
+		],
+		"popularity": 9.0742,
+		"release_date": "2023-11-08",
+		"video": false,
+		"vote_average": 5.94,
+		"vote_count": 3310
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/3P52oz9HPQWxcwHOwxtyrVV1LKi.jpg",
+		"id": 383498,
+		"title": "Deadpool 2",
+		"original_title": "Deadpool 2",
+		"overview": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.",
+		"poster_path": "/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			35,
+			12
+		],
+		"popularity": 13.5038,
+		"release_date": "2018-05-15",
+		"video": false,
+		"vote_average": 7.49,
+		"vote_count": 19107
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/kIBK5SKwgqIIuRKhhWrJn3XkbPq.jpg",
+		"id": 99861,
+		"title": "Avengers: Age of Ultron",
+		"original_title": "Avengers: Age of Ultron",
+		"overview": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.",
+		"poster_path": "/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 19.9204,
+		"release_date": "2015-04-22",
+		"video": false,
+		"vote_average": 7.27,
+		"vote_count": 24294
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/w1oD1MzHjnBJc5snKupIQaSBLIh.jpg",
+		"id": 559,
+		"title": "Spider-Man 3",
+		"original_title": "Spider-Man 3",
+		"overview": "The seemingly invincible Spider-Man goes up against an all-new crop of villains—including the shape-shifting Sandman. While Spider-Man’s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
+		"poster_path": "/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			28,
+			12,
+			878
+		],
+		"popularity": 18.9525,
+		"release_date": "2007-05-01",
+		"video": false,
+		"vote_average": 6.454,
+		"vote_count": 15108
+	},
+	{
+		"adult": false,
+		"backdrop_path": "/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg",
+		"id": 10138,
+		"title": "Iron Man 2",
+		"original_title": "Iron Man 2",
+		"overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
+		"poster_path": "/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+		"media_type": "movie",
+		"original_language": "en",
+		"genre_ids": [
+			12,
+			28,
+			878
+		],
+		"popularity": 27.8953,
+		"release_date": "2010-04-28",
+		"video": false,
+		"vote_average": 6.851,
+		"vote_count": 22260
+	}
+]

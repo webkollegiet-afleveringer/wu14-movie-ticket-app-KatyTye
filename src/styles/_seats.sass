@@ -1,0 +1,132 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+
+// STYLING FOR SEATS PAGE
+.seats-content, .checkout-content
+
+	&__form
+		margin: 25px 25px 0 25px
+
+		&-submit
+			width: 100%
+			border: none
+			padding: 15px
+			display: block
+			cursor: pointer
+			font-size: 18px
+			margin-top: 40px
+			text-align: center
+			text-decoration: none
+			color: var.$text-color
+			border-radius: var.$box-radius
+			background: var.$button-background-color
+
+		&-state
+			display: flex
+			font-size: 12px
+			align-items: center
+			color: var.$text-tag-color
+
+			&::before
+				width: 10px
+				content: ""
+				height: 10px
+				display: block
+				margin-right: 15px
+				border-radius: var.$img-radius
+				border: 1px solid rgba(var.$text-tag-color, 0.5)
+
+			&.select::before
+				background: var.$seat-selected-color
+				border-color: var.$seat-selected-color
+
+			&.reserved::before
+				background: var.$seat-reserved-color
+				border-color: var.$seat-reserved-color
+
+			&s
+				display: flex
+				justify-content: space-between
+
+		&-label-text
+			display: block
+			font-size: 12px
+			margin-bottom: 10px
+
+		&-wrapper
+			display: flex
+			margin-top: 10px
+			justify-content: space-between
+
+			& label
+				width: 45%
+
+				& select
+					text-align: center
+
+		&-select, &-input
+			width: 100%
+			padding: 15px
+			outline: none
+			background: transparent
+			color: var.$text-tag-color
+			border-radius: var.$box-radius
+			border: 2px solid rgba(var.$text-tag-color, 0.5)
+
+			&#cinema
+				display: block
+
+		&-screen
+			margin-top: 50px
+
+		&-seat
+			width: 30px
+			height: 30px
+			cursor: pointer
+			border-radius: var.$box-radius
+			background: var.$background-color
+			border: 2px solid rgba(var.$text-tag-color, 0.5)
+			transition: border 0.3s linear, background 0.3s linear
+
+			&.selected
+				background: var.$seat-selected-color
+				border-color: var.$seat-selected-color
+
+			&:disabled
+				background: var.$seat-reserved-color
+				border-color: var.$seat-reserved-color
+
+			&s
+				display: flex
+				transform: translateY(-40px)
+				justify-content: space-between
+
+				&-left
+					width: 45%
+
+					&-special
+						gap: 12px
+						display: grid
+						margin-left: 26%
+						grid-template-columns: 1fr 1fr 1fr
+
+					&-middle
+						gap: 10px
+						display: grid
+						margin: 10px 0
+						grid-template-columns: 1fr 1fr 1fr 1fr
+
+				&-right
+					width: 45%
+
+					&-special
+						gap: 12px
+						display: grid
+						margin-right: 26%
+						grid-template-columns: 1fr 1fr 1fr
+
+					&-middle
+						gap: 10px
+						display: grid
+						margin: 10px 0
+						grid-template-columns: 1fr 1fr 1fr 1fr

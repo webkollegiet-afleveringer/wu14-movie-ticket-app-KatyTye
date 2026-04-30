@@ -1,0 +1,105 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+
+// STYLING FOR TICKETS PAGE
+.ticket-content
+	padding: 0 25px 25px 25px
+
+	&__article
+
+		&-title
+			font-size: 20px
+			margin-bottom: 15px
+
+		&-text
+			font-size: 14px
+			color: var.$text-tag-color
+
+	&__item
+		padding: 25px
+		min-width: 100%
+		overflow: hidden
+		color: var.$ticket-text-color
+		border-radius: var.$box-radius
+		background: var.$ticket-background-color
+
+		&-space
+			margin: 50px 0
+			position: relative
+			border-bottom: 2px dashed var.$background-color
+
+			&::after, &::before
+				top: -20px
+				content: ""
+				width: 40px
+				height: 40px
+				display: block
+				position: absolute
+				border-radius: 100px
+				background: var.$background-color
+
+			&::after
+				right: -42px
+
+			&::before
+				left: -42px
+
+		&-bar
+			height: 60px
+			display: flex
+			margin: 0 auto
+			max-width: 250px
+			width: calc(100% - 50px)
+			justify-content: space-between
+
+			&-line
+				height: 100%
+				background: var.$ticket-text-color
+
+				@for $i from 2 through 7
+					&.bar-width-#{$i}
+						width: $i * 1px
+
+		&-seats,&-date,&-time,&-order,&-loc,&-payment
+			font-size: 14px
+			font-weight: bold
+
+			&-text
+				display: block
+				margin-top: 30px
+				color: var.$ticket-second-text-color
+
+		&-type
+			color: var.$ticket-color
+
+		&-title
+			display: flex
+			font-weight: bold
+			margin-right: 25px
+			justify-content: space-between
+
+		&-wrapper
+			display: flex
+			margin-right: 25px
+			flex-direction: row-reverse
+			justify-content: space-between
+
+	&__list
+		gap: 25px
+		display: flex
+		margin: 45px 0
+		flex-wrap: nowrap
+		list-style-type: none
+		scrollbar-width: none
+		overflow: scroll hidden
+
+	&__button
+		width: 100%
+		border: none
+		padding: 15px
+		cursor: pointer
+		font-size: 18px
+		margin-top: 25px
+		color: var.$text-color
+		border-radius: var.$box-radius
+		background: var.$button-background-color

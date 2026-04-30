@@ -1,0 +1,28 @@
+// VALUABLES
+@use "./_valuables.sass" as var
+
+// BROWSER RESETS
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: var.$font-family, var.$backup-font-family
+
+img, svg
+	width: 100%
+	height: 100%
+
+body
+	width: 100dvw
+	min-height: 100dvh
+	position: relative
+	color: var.$text-color
+	background: var.$background-color
+
+main.settings, main.plan, main.home, main.explore, main.plan
+	padding-bottom: 100px
+
+input
+	border: none
+	outline: none
+	background: transparent

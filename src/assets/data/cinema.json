@@ -1,0 +1,102 @@
+[
+	{
+		"type": "Feature",
+		"properties": {
+			"name": "Kino Ro's Torv",
+			"country": "Denmark",
+			"country_code": "dk",
+			"state": "Region Zealand",
+			"city": "Roskilde",
+			"municipality": "Roskilde Municipality",
+			"postcode": "4000",
+			"suburb": "Hedegårdene",
+			"street": "Ro's Torv P-hus",
+			"iso3166_2": "DK-85",
+			"lon": 12.1004121,
+			"lat": 55.6418998,
+			"formatted": "Kino Ro's Torv, Ro's Torv P-hus, 4000 Roskilde, Denmark",
+			"address_line1": "Kino Ro's Torv",
+			"address_line2": "Ro's Torv P-hus, 4000 Roskilde, Denmark",
+			"categories": [
+				"entertainment",
+				"entertainment.cinema"
+			],
+			"details": [],
+			"datasource": {
+				"sourcename": "openstreetmap",
+				"attribution": "© OpenStreetMap contributors",
+				"license": "Open Database License",
+				"url": "https://www.openstreetmap.org/copyright",
+				"raw": {
+					"name": "Kino Ro's Torv",
+					"osm_id": 317062996,
+					"amenity": "cinema",
+					"osm_type": "w"
+				}
+			},
+			"distance": 1996,
+			"place_id": "518c0ac33769332840591063cbc529d24b40f00102f90154ffe5120000000092030e4b696e6f20526f277320546f7276"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				12.100412123259296,
+				55.6418997996426
+			]
+		}
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"name": "Kino",
+			"country": "Denmark",
+			"country_code": "dk",
+			"state": "Region Zealand",
+			"city": "Roskilde",
+			"municipality": "Roskilde Municipality",
+			"postcode": "4000",
+			"suburb": "Hedegårdene",
+			"street": "Københavnsvej",
+			"iso3166_2": "DK-85",
+			"lon": 12.1009563,
+			"lat": 55.6417271,
+			"formatted": "Kino, Københavnsvej, 4000 Roskilde, Denmark",
+			"address_line1": "Kino",
+			"address_line2": "Københavnsvej, 4000 Roskilde, Denmark",
+			"categories": [
+				"entertainment",
+				"entertainment.cinema"
+			],
+			"details": [
+				"details"
+			],
+			"datasource": {
+				"sourcename": "openstreetmap",
+				"attribution": "© OpenStreetMap contributors",
+				"license": "Open Database License",
+				"url": "https://www.openstreetmap.org/copyright",
+				"raw": {
+					"name": "Kino",
+					"level": 2,
+					"osm_id": 9035054025,
+					"amenity": "cinema",
+					"website": "https://rostorv.dk/boern_fritid/kino/",
+					"osm_type": "n",
+					"ref:DK:cvr": 87441415,
+					"fvst:navnelbnr": 94282,
+					"ref:DK:cvr:pnummer": 1002771390
+				}
+			},
+			"website": "https://rostorv.dk/boern_fritid/kino/",
+			"distance": 2018,
+			"place_id": "517da64d8bb033284059faf5141d24d24b40f00103f901c9fb871a020000009203044b696e6f"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				12.100956300000002,
+				55.64172709964255
+			]
+		}
+	}
+]
